@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Add_Photo_Instructions" customModule="Cafe__Nibm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIf-xs-meB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZY-75-Ijf">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-eA-lML">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="WkD-dV-751"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-fb-yU6">
+                                    <rect key="frame" x="0.0" y="34" width="414" height="92"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="92" id="gVr-0L-Mcc"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gr-1w-ogZ" customClass="Add_Photo_Instructions" customModule="Cafe__Nibm" customModuleProvider="target">
+                                    <rect key="frame" x="118" y="126" width="178" height="164"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="178" id="RrO-yv-cH3"/>
+                                        <constraint firstAttribute="height" constant="164" id="g7C-NQ-JJk"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="bxd-fb-yU6" firstAttribute="top" secondItem="MeI-eA-lML" secondAttribute="bottom" id="9UF-hH-Nu3"/>
+                                <constraint firstAttribute="trailing" secondItem="MeI-eA-lML" secondAttribute="trailing" id="XuG-Et-hcG"/>
+                                <constraint firstItem="bxd-fb-yU6" firstAttribute="leading" secondItem="6ZY-75-Ijf" secondAttribute="leading" id="dCa-eb-C5E"/>
+                                <constraint firstItem="MeI-eA-lML" firstAttribute="leading" secondItem="6ZY-75-Ijf" secondAttribute="leading" id="gxO-lk-KnE"/>
+                                <constraint firstItem="9gr-1w-ogZ" firstAttribute="centerX" secondItem="6ZY-75-Ijf" secondAttribute="centerX" id="kXs-lh-JM0"/>
+                                <constraint firstAttribute="height" constant="810" id="oux-kk-Xxg"/>
+                                <constraint firstItem="9gr-1w-ogZ" firstAttribute="top" secondItem="bxd-fb-yU6" secondAttribute="bottom" id="oyJ-Id-EPn"/>
+                                <constraint firstAttribute="trailing" secondItem="bxd-fb-yU6" secondAttribute="trailing" id="q82-dH-0gy"/>
+                                <constraint firstItem="MeI-eA-lML" firstAttribute="top" secondItem="6ZY-75-Ijf" secondAttribute="top" id="wFj-GQ-KuG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="6ZY-75-Ijf" firstAttribute="width" secondItem="oIf-xs-meB" secondAttribute="width" id="Bim-mv-0bm"/>
+                        <constraint firstItem="6ZY-75-Ijf" firstAttribute="top" secondItem="oIf-xs-meB" secondAttribute="top" id="O2h-Dm-qaw"/>
+                        <constraint firstAttribute="trailing" secondItem="6ZY-75-Ijf" secondAttribute="trailing" id="jKJ-S0-0zb"/>
+                        <constraint firstAttribute="bottom" secondItem="6ZY-75-Ijf" secondAttribute="bottom" id="kmp-VX-Nnn"/>
+                        <constraint firstItem="6ZY-75-Ijf" firstAttribute="leading" secondItem="oIf-xs-meB" secondAttribute="leading" id="wO6-pg-dWL"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oIf-xs-meB" secondAttribute="trailing" id="Ez5-FN-dOJ"/>
+                <constraint firstItem="oIf-xs-meB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="J90-OC-YfN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oIf-xs-meB" secondAttribute="bottom" id="iGU-2t-Pzb"/>
+                <constraint firstItem="oIf-xs-meB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kN5-pc-AXG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="eView" destination="9gr-1w-ogZ" id="KiE-FY-UnB"/>
+                <outlet property="labelDesc" destination="bxd-fb-yU6" id="DXo-Kf-g7d"/>
+                <outlet property="labelTitle" destination="MeI-eA-lML" id="PHC-9W-lTy"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </view>
+    </objects>
+</document>
