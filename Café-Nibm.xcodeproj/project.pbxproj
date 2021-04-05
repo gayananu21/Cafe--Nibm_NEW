@@ -17,6 +17,7 @@
 		9B0D42C325E4D09800F06C91 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D42C225E4D09800F06C91 /* RestaurantTableViewCell.swift */; };
 		9B0D42C525E4D13400F06C91 /* ResturantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D42C425E4D13400F06C91 /* ResturantViewController.swift */; };
 		9B0D42C825E4D5C700F06C91 /* FoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D42C725E4D5C700F06C91 /* FoodItemViewController.swift */; };
+		9B15B8C5261AC2A6003BC4DA /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15B8C4261AC2A6003BC4DA /* SignUpScreenViewController.swift */; };
 		9B2BD57025E36E00000A33BB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BD56E25E36E00000A33BB /* Utilities.swift */; };
 		9B2BD57225E37CCB000A33BB /* UHBCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BD57125E37CCB000A33BB /* UHBCustomLabel.swift */; };
 		9B2BD57425E39783000A33BB /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BD57325E39783000A33BB /* LoginScreenViewController.swift */; };
@@ -39,13 +40,11 @@
 		9B43BBDA25E36D950039D5E2 /* Cafe__NibmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBD925E36D950039D5E2 /* Cafe__NibmTests.swift */; };
 		9B43BBE525E36D950039D5E2 /* Cafe__NibmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */; };
 		9B44123325E6AC8C00A0445A /* Try_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */; };
-		9B67F10C26061BC5003A306B /* MY_TestViewController_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67F10B26061BC5003A306B /* MY_TestViewController_1_ViewController.swift */; };
 		9B75A46325E7F25A00F20165 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46225E7F25900F20165 /* OrderViewController.swift */; };
 		9B75A46525E7F3D700F20165 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46425E7F3D700F20165 /* OrderTableViewCell.swift */; };
 		9B75A46725E8091700F20165 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46625E8091700F20165 /* ProfileViewController.swift */; };
 		9B75A46925E8BA2100F20165 /* ProfileUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46825E8BA2100F20165 /* ProfileUITableViewCell.swift */; };
 		9B75A46B25E8C1A900F20165 /* Profile_1_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46A25E8C1A900F20165 /* Profile_1_TableViewCell.swift */; };
-		9B8B15FC25E416E200E915C3 /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B15FB25E416E200E915C3 /* SignUpScreenViewController.swift */; };
 		9B9ACB482611E406006998F8 /* Add_Photo_Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9ACB472611E406006998F8 /* Add_Photo_Instructions.swift */; };
 		9B9ACB4A2611E440006998F8 /* Add_Photo_Instructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9ACB492611E43F006998F8 /* Add_Photo_Instructions.xib */; };
 		9B9BF52725E56BA2002F0B53 /* HomeCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9BF52625E56BA2002F0B53 /* HomeCartTableViewCell.swift */; };
@@ -114,6 +113,7 @@
 		9B0D42C225E4D09800F06C91 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewCell.swift; path = ../RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		9B0D42C425E4D13400F06C91 /* ResturantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResturantViewController.swift; path = ../ResturantViewController.swift; sourceTree = "<group>"; };
 		9B0D42C725E4D5C700F06C91 /* FoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewController.swift; sourceTree = "<group>"; };
+		9B15B8C4261AC2A6003BC4DA /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		9B2BD56E25E36E00000A33BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9B2BD57125E37CCB000A33BB /* UHBCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHBCustomLabel.swift; sourceTree = "<group>"; };
 		9B2BD57325E39783000A33BB /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
@@ -142,13 +142,11 @@
 		9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe__NibmUITests.swift; sourceTree = "<group>"; };
 		9B43BBE625E36D950039D5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try_1_ViewController.swift; sourceTree = "<group>"; };
-		9B67F10B26061BC5003A306B /* MY_TestViewController_1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MY_TestViewController_1_ViewController.swift; path = "/Users/gayandisanayaka/Downloads/try/correct/Café-Nibm/Café-Nibm/Controllers/MY_TestViewController_1_ViewController.swift"; sourceTree = "<absolute>"; };
 		9B75A46225E7F25900F20165 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		9B75A46425E7F3D700F20165 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		9B75A46625E8091700F20165 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
 		9B75A46825E8BA2100F20165 /* ProfileUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUITableViewCell.swift; sourceTree = "<group>"; };
 		9B75A46A25E8C1A900F20165 /* Profile_1_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_1_TableViewCell.swift; sourceTree = "<group>"; };
-		9B8B15FB25E416E200E915C3 /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		9B9ACB472611E406006998F8 /* Add_Photo_Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_Photo_Instructions.swift; sourceTree = "<group>"; };
 		9B9ACB492611E43F006998F8 /* Add_Photo_Instructions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Add_Photo_Instructions.xib; sourceTree = "<group>"; };
 		9B9BF52625E56BA2002F0B53 /* HomeCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCartTableViewCell.swift; sourceTree = "<group>"; };
@@ -324,8 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				9B2BD57325E39783000A33BB /* LoginScreenViewController.swift */,
-				9B8B15FB25E416E200E915C3 /* SignUpScreenViewController.swift */,
 				9B0D427C25E42BD600F06C91 /* ForgotPasswordViewController.swift */,
+				9B15B8C4261AC2A6003BC4DA /* SignUpScreenViewController.swift */,
 				9B43BBC625E36D8E0039D5E2 /* ViewController.swift */,
 				9B0D42C425E4D13400F06C91 /* ResturantViewController.swift */,
 				9BDB570525E4F2D4003DC9B1 /* SampleSliderViewController.swift */,
@@ -341,7 +339,6 @@
 				9B01F2CC25F5FFF200292A5C /* LocationViewController.swift */,
 				9BE4815F2604B2D7006DB71D /* Location_NAV_ViewController.swift */,
 				9BE481632605DC52006DB71D /* Order_History_Detail_ViewController.swift */,
-				9B67F10B26061BC5003A306B /* MY_TestViewController_1_ViewController.swift */,
 				9BF5570E260913CF0060092A /* NoNetworkViewController.swift */,
 				9BF97F39260F4DDA00B9C1F4 /* OnboardingController.swift */,
 				9B0D42C725E4D5C700F06C91 /* FoodItemViewController.swift */,
@@ -713,7 +710,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8B15FC25E416E200E915C3 /* SignUpScreenViewController.swift in Sources */,
 				9B37184A25E67180003A3451 /* FoodBar.swift in Sources */,
 				9BD1E47A25F07BE1004DF8C0 /* OrderScreenModel.swift in Sources */,
 				9B04F8D525F4BDA1003FF072 /* CollectionModel.swift in Sources */,
@@ -738,6 +734,7 @@
 				9B75A46B25E8C1A900F20165 /* Profile_1_TableViewCell.swift in Sources */,
 				9B04F8D925F51B13003FF072 /* LOGViewController.swift in Sources */,
 				9BE481642605DC52006DB71D /* Order_History_Detail_ViewController.swift in Sources */,
+				9B15B8C5261AC2A6003BC4DA /* SignUpScreenViewController.swift in Sources */,
 				9BD1E47825F07BC6004DF8C0 /* OrderScreenTableViewCell.swift in Sources */,
 				9BF97F3A260F4DDA00B9C1F4 /* OnboardingController.swift in Sources */,
 				9B2BD57425E39783000A33BB /* LoginScreenViewController.swift in Sources */,
@@ -747,7 +744,6 @@
 				9B75A46325E7F25A00F20165 /* OrderViewController.swift in Sources */,
 				9B43BBC525E36D8E0039D5E2 /* SceneDelegate.swift in Sources */,
 				9BDB570625E4F2D4003DC9B1 /* SampleSliderViewController.swift in Sources */,
-				9B67F10C26061BC5003A306B /* MY_TestViewController_1_ViewController.swift in Sources */,
 				9B0D42C125E4D08600F06C91 /* Food.swift in Sources */,
 				9B01F2CB25F5D3E000292A5C /* Home_Tab_ViewController.swift in Sources */,
 				9BFAC94B25EBA81A00B87075 /* ArtistModel.swift in Sources */,

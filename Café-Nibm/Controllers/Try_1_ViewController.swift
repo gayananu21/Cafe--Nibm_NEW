@@ -14,7 +14,7 @@ import FirebaseAuth
 
 class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
-    @IBOutlet weak var emptyCartImage: UIImageView!
+   // @IBOutlet weak var emptyCartImage: UIImageView!
     
     // Initialize Database, Auth, Storage
               var database = Database.database()
@@ -36,6 +36,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
     let user = Auth.auth().currentUser
     
     var updateCart: DatabaseReference!
+    
     
     
     
@@ -126,11 +127,36 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
              //creating a cell using the custom class
              let cell = tableView.dequeueReusableCell(withIdentifier: "downCell1", for: indexPath) as! RestaurantTableViewCell
               
+             
+             cell.delegate = self
+                  cell.Index = indexPath
+             
               //the artist object
               let food: FoodModel
               
               //getting the artist of selected position
               food = foodList[indexPath.row]
+             
+             if (food.availability == "on"){
+                cell.foodImage.alpha = 0.3
+                cell.foodName.alpha = 0.3
+                cell.foodDescription.alpha = 0.3
+                cell.foodPrice.alpha = 0.3
+                
+                cell.foodStatus.text = "Not available"
+                cell.foodSwitch.setOn(true, animated: true)
+             }
+             
+             if (food.availability == "off"){
+                
+                cell.foodImage.alpha = 1
+                cell.foodName.alpha = 1
+                cell.foodDescription.alpha = 1
+                cell.foodPrice.alpha = 1
+                
+                cell.foodStatus.text = "Available"
+                cell.foodSwitch.setOn(false, animated: true)
+             }
               
               //adding values to labels
               cell.foodName.text = food.name
@@ -177,6 +203,8 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
         
         //getting a reference to the node artists
                refFoods = Database.database().reference().child("Foods");
+        
+        
                  
                  //observing the data changes
                       refFoods.observe(DataEventType.value, with: { (snapshot) in
@@ -191,13 +219,16 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                               for Foods in snapshot.children.allObjects as! [DataSnapshot] {
                                   //getting values
                                   let foodObject = Foods.value as? [String: AnyObject]
+                               
                                   let foodName  = foodObject?["name"]
                                   let foodDescription  = foodObject?["description"]
                                   let foodPrice = foodObject?["price"]
-                                let foodImage = foodObject?["foodImage"]
+                                  let foodImage = foodObject?["foodImage"]
+                                  let key = foodObject?["id"]
+                                let availability = foodObject?["availability"]
                                   
                                   //creating artist object with model and fetched values
-                                let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
+                                let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
                                   
                                   //appending it to list
                                   self.foodList.append(food)
@@ -223,7 +254,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                    //if the reference have some values
                    if snapshot.childrenCount > 0 {
                      
-                  self.emptyCartImage.alpha = 0
+              //    self.emptyCartImage.alpha = 0
                        
                        //clearing the list
                        self.cartList.removeAll()
@@ -283,24 +314,28 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                        //clearing the list
                        self.foodList.removeAll()
                        
-                       //iterating through all the values
+                     //iterating through all the values
                        for Foods in snapshot.children.allObjects as! [DataSnapshot] {
                            //getting values
                            let foodObject = Foods.value as? [String: AnyObject]
+                        
                            let foodName  = foodObject?["name"]
                            let foodDescription  = foodObject?["description"]
                            let foodPrice = foodObject?["price"]
-                        let foodImage = foodObject?["foodImage"]
-
+                           let foodImage = foodObject?["foodImage"]
+                           let key = foodObject?["id"]
+                         let availability = foodObject?["availability"]
                            
                            //creating artist object with model and fetched values
-                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
+                         let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
                            
                            //appending it to list
                            self.foodList.append(food)
                          
                          
-                      
+                        
+                         
+                         
                          
                        }
                        
@@ -325,21 +360,28 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                        //clearing the list
                        self.foodList.removeAll()
                        
-                       //iterating through all the values
+                      //iterating through all the values
                        for Foods in snapshot.children.allObjects as! [DataSnapshot] {
                            //getting values
                            let foodObject = Foods.value as? [String: AnyObject]
+                        
                            let foodName  = foodObject?["name"]
                            let foodDescription  = foodObject?["description"]
                            let foodPrice = foodObject?["price"]
-                         let foodImage = foodObject?["foodImage"]
+                           let foodImage = foodObject?["foodImage"]
+                           let key = foodObject?["id"]
+                         let availability = foodObject?["availability"]
                            
                            //creating artist object with model and fetched values
-                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
+                         let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
                            
                            //appending it to list
                            self.foodList.append(food)
+                         
+                         
                         
+                         
+                         
                          
                        }
                        
@@ -366,24 +408,28 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                        
                        //clearing the list
                        self.foodList.removeAll()
-                       
                        //iterating through all the values
                        for Foods in snapshot.children.allObjects as! [DataSnapshot] {
                            //getting values
                            let foodObject = Foods.value as? [String: AnyObject]
+                        
                            let foodName  = foodObject?["name"]
                            let foodDescription  = foodObject?["description"]
                            let foodPrice = foodObject?["price"]
-                          let foodImage = foodObject?["foodImage"]
+                           let foodImage = foodObject?["foodImage"]
+                           let key = foodObject?["id"]
+                         let availability = foodObject?["availability"]
                            
                            //creating artist object with model and fetched values
-                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
+                         let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
                            
                            //appending it to list
                            self.foodList.append(food)
                          
                          
-                      
+                        
+                         
+                         
                          
                        }
                        
@@ -408,26 +454,30 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                        
                        //clearing the list
                        self.foodList.removeAll()
-                       
                        //iterating through all the values
-                       for Foods in snapshot.children.allObjects as! [DataSnapshot] {
-                           //getting values
-                           let foodObject = Foods.value as? [String: AnyObject]
-                           let foodName  = foodObject?["name"]
-                           let foodDescription  = foodObject?["description"]
-                           let foodPrice = foodObject?["price"]
-                         let foodImage = foodObject?["foodImage"]
-                           
-                           //creating artist object with model and fetched values
-                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
-                           
-                           //appending it to list
-                           self.foodList.append(food)
+                        for Foods in snapshot.children.allObjects as! [DataSnapshot] {
+                            //getting values
+                            let foodObject = Foods.value as? [String: AnyObject]
                          
+                            let foodName  = foodObject?["name"]
+                            let foodDescription  = foodObject?["description"]
+                            let foodPrice = foodObject?["price"]
+                            let foodImage = foodObject?["foodImage"]
+                            let key = foodObject?["id"]
+                          let availability = foodObject?["availability"]
+                            
+                            //creating artist object with model and fetched values
+                          let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
+                            
+                            //appending it to list
+                            self.foodList.append(food)
+                          
+                          
                          
-                      
-                         
-                       }
+                          
+                          
+                          
+                        }
                        
                        //reloading the tableview
                        self.downTableview.reloadData()
@@ -451,26 +501,30 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                        //clearing the list
                        self.foodList.removeAll()
                        
-                       //iterating through all the values
-                       for Foods in snapshot.children.allObjects as! [DataSnapshot] {
-                           //getting values
-                           let foodObject = Foods.value as? [String: AnyObject]
-                           let foodName  = foodObject?["name"]
-                           let foodDescription  = foodObject?["description"]
-                           let foodPrice = foodObject?["price"]
-                        let foodImage = foodObject?["foodImage"]
-
-                           
-                           //creating artist object with model and fetched values
-                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
-                           
-                           //appending it to list
-                           self.foodList.append(food)
-                         
-                         
+                    //iterating through all the values
+                     for Foods in snapshot.children.allObjects as! [DataSnapshot] {
+                         //getting values
+                         let foodObject = Foods.value as? [String: AnyObject]
                       
+                         let foodName  = foodObject?["name"]
+                         let foodDescription  = foodObject?["description"]
+                         let foodPrice = foodObject?["price"]
+                         let foodImage = foodObject?["foodImage"]
+                         let key = foodObject?["id"]
+                       let availability = foodObject?["availability"]
                          
-                       }
+                         //creating artist object with model and fetched values
+                       let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
+                         
+                         //appending it to list
+                         self.foodList.append(food)
+                       
+                       
+                      
+                       
+                       
+                       
+                     }
                        
                        //reloading the tableview
                        self.downTableview.reloadData()
@@ -494,25 +548,30 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                        //clearing the list
                        self.foodList.removeAll()
                        
-                       //iterating through all the values
-                       for Foods in snapshot.children.allObjects as! [DataSnapshot] {
-                           //getting values
-                           let foodObject = Foods.value as? [String: AnyObject]
-                           let foodName  = foodObject?["name"]
-                           let foodDescription  = foodObject?["description"]
-                           let foodPrice = foodObject?["price"]
-                         let foodImage = foodObject?["foodImage"]
-                           
-                           //creating artist object with model and fetched values
-                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?)
-                           
-                           //appending it to list
-                           self.foodList.append(food)
-                         
-                         
-                      
-                         
-                       }
+                    //iterating through all the values
+                      for Foods in snapshot.children.allObjects as! [DataSnapshot] {
+                          //getting values
+                          let foodObject = Foods.value as? [String: AnyObject]
+                       
+                          let foodName  = foodObject?["name"]
+                          let foodDescription  = foodObject?["description"]
+                          let foodPrice = foodObject?["price"]
+                          let foodImage = foodObject?["foodImage"]
+                          let key = foodObject?["id"]
+                        let availability = foodObject?["availability"]
+                          
+                          //creating artist object with model and fetched values
+                        let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
+                          
+                          //appending it to list
+                          self.foodList.append(food)
+                        
+                        
+                       
+                        
+                        
+                        
+                      }
                        
                        //reloading the tableview
                        self.downTableview.reloadData()
@@ -538,23 +597,93 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
 }
 
 
-extension Try_1_ViewController: RestaurantTableViewCellDelegate{
-    func plusItemTapped() {
-        print("PLus Tapped:")
+
+extension Try_1_ViewController: FoodStatusDelegate {
+    func CheckAvailability(Index: Int, isOn: Bool) {
         
-        self.count = self.count + 1
         
-        print(self.count)
+
+      if(isOn == true){
+                  
+        
+        let food: FoodModel
+        
+        //getting the artist of selected position
+        food = foodList[Index]
+                  
+        
+            let ref = Database.database().reference()
+                                 // let userRef = ref.child("addCart/PbvgpIOEccP1DQnwCUz2Iy3wJRm1/-MXSRJGwo57AYd3p5ErH")
+            let userRef = ref.child("Foods/\(food.key ?? "")")
+                                  userRef.updateChildValues(["availability": String("on")])
+  
+        
+        
+        
+            let alert = UIAlertController(title: "Alert", message: "switch on", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                    case .default:
+                    print("default")
+                    
+                    case .cancel:
+                    print("cancel")
+                    
+                    case .destructive:
+                    print("destructive")
+                    
+                }
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+            
+                  
+              }
+        
+        
+        if(isOn == false){
+            
+            
+            //the artist object
+                         let food: FoodModel
+                         
+                         //getting the artist of selected position
+                         food = foodList[Index]
+            
+            
+                      let alert = UIAlertController(title: "Alert", message: "switch off", preferredStyle: .alert)
+                      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                          switch action.style{
+                              case .default:
+                              print("default")
+                              
+                              case .cancel:
+                              print("cancel")
+                              
+                              case .destructive:
+                              print("destructive")
+                              
+                          }
+                      }))
+                      self.present(alert, animated: true, completion: nil)
+                  
+                  
+        
+            let ref = Database.database().reference()
+                                 // let userRef = ref.child("addCart/PbvgpIOEccP1DQnwCUz2Iy3wJRm1/-MXSRJGwo57AYd3p5ErH")
+            let userRef = ref.child("Foods/\(food.key ?? "")")
+                                  userRef.updateChildValues(["availability": String("off")])
+                                  
+                                 
+                  
+              }
+
         
     }
     
-    func minusItemTapped() {
-        print("Minus Tapped:")
-        self.count = self.count - 1
-           print(self.count)
-    }
+   
     
-    
-       
     
 }
+
+

@@ -9,11 +9,16 @@ class FoodModel {
     var name: String?
     var price: String?
     var foodImage: String?
+    var key: String?
+    var availability: String?
     
-    init(description: String?, name: String?, price: String?, foodImage: String?){
+    init(description: String?, name: String?, price: String?, foodImage: String?,  key: String?, availability: String?
+){
         self.description = description
         self.name = name
         self.price = price
         self.foodImage = foodImage
+        self.key = key
+        self.availability = availability
     }
 }
