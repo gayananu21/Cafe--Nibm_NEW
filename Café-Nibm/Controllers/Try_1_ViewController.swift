@@ -138,23 +138,40 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
               food = foodList[indexPath.row]
              
              if (food.availability == "on"){
+                
+               
+                cell.foodStatusImage.image = UIImage(named:"xMark")
+                
                 cell.foodImage.alpha = 0.3
                 cell.foodName.alpha = 0.3
                 cell.foodDescription.alpha = 0.3
                 cell.foodPrice.alpha = 0.3
+                cell.foodDiscount.alpha = 0.3
+                cell.foodPriceType.alpha = 0.3
+                cell.foodDiscount.backgroundColor = .systemRed
+                 cell.foodDiscount.borderColor = .systemRed
                 
-                cell.foodStatus.text = "Not available"
+                
+                
                 cell.foodSwitch.setOn(true, animated: true)
              }
              
              if (food.availability == "off"){
                 
+                
+                
+               cell.foodStatusImage.image = UIImage(named:"orderRight")
+                
                 cell.foodImage.alpha = 1
                 cell.foodName.alpha = 1
                 cell.foodDescription.alpha = 1
                 cell.foodPrice.alpha = 1
+                cell.foodDiscount.alpha = 1
+                cell.foodPriceType.alpha = 1
+                cell.foodDiscount.backgroundColor = .systemGreen
+                cell.foodDiscount.borderColor = .systemGreen
                 
-                cell.foodStatus.text = "Available"
+               
                 cell.foodSwitch.setOn(false, animated: true)
              }
               

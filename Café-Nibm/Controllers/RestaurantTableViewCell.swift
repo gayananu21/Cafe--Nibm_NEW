@@ -9,21 +9,22 @@
 import UIKit
 
 
-protocol RestaurantTableViewCellDelegate: AnyObject {
-
-   func plusItemTapped()
-   func minusItemTapped()
-    
-    
-}
-
 class RestaurantTableViewCell: UITableViewCell {
     
     
+    var delegate: FoodStatusDelegate?
+    var Index: IndexPath?
+    var Status: UISwitch?
     
-    weak var delegate: RestaurantTableViewCellDelegate?
+    
 
+  
+    @IBOutlet weak var foodSwitch: UISwitch!
+    
 
+    @IBOutlet weak var foodPriceType: UILabel!
+    @IBOutlet weak var foodDiscount: RoundLabel!
+    @IBOutlet weak var foodStatusImage: UIImageView!
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodDescription: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
@@ -58,28 +59,29 @@ class RestaurantTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func onCheckAvailability(_ sender: UISwitch) {
+           
+        if(sender.isOn){
+            
+            
+            delegate?.CheckAvailability(Index: Index!.row, isOn: true)
+        }
+        
+        else{
+            delegate?.CheckAvailability(Index: Index!.row, isOn: false)
+        }
+        
+           
+       }
+       
 
-    @IBAction func plusItemTapped() {
-        
-        
-        delegate?.plusItemTapped()
-        
-        self.foodCount = self.foodCount + 1
-        self.homeCartEditCount.text = String(self.foodCount)
-        
-        self.total = self.foodCount * self.unitPrice
-        self.homeCartCornerLabel.text = String(self.total)
-    }
-    @IBAction func minusItemTapped() {
-        
    
-         delegate?.minusItemTapped()
-        
-        self.foodCount = self.foodCount - 1
-        self.homeCartEditCount.text = String(self.foodCount)
-        self.total = self.foodCount * self.unitPrice
-        self.homeCartCornerLabel.text = String(self.total)
+}
 
-        
-    }
+protocol FoodStatusDelegate {
+    func CheckAvailability(Index: Int, isOn: Bool)
+    
+    
+    
 }

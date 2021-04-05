@@ -103,9 +103,11 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
       
+        
       
         //creating a cell using the custom class
         let cell = tableView.dequeueReusableCell(withIdentifier: "CART_CELL", for: indexPath) as! CartTableViewCell
+        
         
       
         

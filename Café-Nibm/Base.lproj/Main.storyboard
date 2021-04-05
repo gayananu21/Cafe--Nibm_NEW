@@ -3032,7 +3032,7 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWb-hP-8yO" customClass="RoundLabel" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                     <rect key="frame" x="94" y="8" width="29" height="29"/>
-                                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="29" id="0FW-Jc-oYT"/>
                                                                         <constraint firstAttribute="width" constant="29" id="RK3-TZ-hTU"/>
@@ -3065,25 +3065,22 @@
                                                                         <action selector="onCheckAvailability:" destination="DWY-5X-9vW" eventType="valueChanged" id="ULG-QM-zEc"/>
                                                                     </connections>
                                                                 </switch>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TZ-z5-YzK">
-                                                                    <rect key="frame" x="57" y="91" width="66" height="28"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderRight" translatesAutoresizingMaskIntoConstraints="NO" id="CBT-sY-PnB">
+                                                                    <rect key="frame" x="103" y="103" width="20" height="20"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="66" id="17O-9i-GWR"/>
-                                                                        <constraint firstAttribute="height" constant="28" id="slr-Vs-8fs"/>
+                                                                        <constraint firstAttribute="width" constant="20" id="CKL-0G-nJP"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="Ccd-sO-yKr"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="10"/>
-                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="iWb-hP-8yO" firstAttribute="top" secondItem="AW7-rA-GgJ" secondAttribute="top" constant="8" id="MXz-gR-921"/>
                                                                 <constraint firstAttribute="trailing" secondItem="iWb-hP-8yO" secondAttribute="trailing" constant="8.5" id="Oyi-h6-fvr"/>
                                                                 <constraint firstItem="eB9-Ou-nqy" firstAttribute="top" secondItem="iWb-hP-8yO" secondAttribute="bottom" constant="15" id="Ski-GG-2fC"/>
-                                                                <constraint firstAttribute="trailing" secondItem="1TZ-z5-YzK" secondAttribute="trailing" constant="8.5" id="TXF-px-kur"/>
                                                                 <constraint firstAttribute="trailing" secondItem="eB9-Ou-nqy" secondAttribute="trailing" constant="8.5" id="VSc-JH-VTL"/>
-                                                                <constraint firstItem="1TZ-z5-YzK" firstAttribute="top" secondItem="eB9-Ou-nqy" secondAttribute="bottom" constant="8" id="fV2-z5-z3h"/>
+                                                                <constraint firstAttribute="trailing" secondItem="CBT-sY-PnB" secondAttribute="trailing" constant="8.5" id="XY5-3l-5VA"/>
+                                                                <constraint firstAttribute="bottom" secondItem="CBT-sY-PnB" secondAttribute="bottom" constant="4" id="aTp-CV-PBf"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -3104,10 +3101,12 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="foodDescription" destination="2lR-hq-qae" id="SYB-dH-XEh"/>
+                                            <outlet property="foodDiscount" destination="iWb-hP-8yO" id="yK2-hB-vLm"/>
                                             <outlet property="foodImage" destination="BHe-xa-7Vt" id="8sb-MV-DHr"/>
                                             <outlet property="foodName" destination="ak9-CE-jql" id="1Bw-MJ-nJc"/>
                                             <outlet property="foodPrice" destination="5Nb-xu-gmE" id="mwt-0Y-FWa"/>
-                                            <outlet property="foodStatus" destination="1TZ-z5-YzK" id="w98-pH-rDd"/>
+                                            <outlet property="foodPriceType" destination="MAE-zA-R1E" id="5TG-Ic-vph"/>
+                                            <outlet property="foodStatusImage" destination="CBT-sY-PnB" id="aVO-ax-hSp"/>
                                             <outlet property="foodSwitch" destination="eB9-Ou-nqy" id="ip2-zE-mgZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -6568,6 +6567,7 @@
         <image name="minus.circle" catalog="system" width="64" height="62"/>
         <image name="noO" width="508" height="900"/>
         <image name="orderGray" width="1024" height="1024"/>
+        <image name="orderRight" width="512" height="512"/>
         <image name="orefresh-removebg-preview" width="500" height="500"/>
         <image name="pencil" catalog="system" width="64" height="58"/>
         <image name="person.circle" catalog="system" width="64" height="62"/>
