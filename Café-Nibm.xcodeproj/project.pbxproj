@@ -31,6 +31,7 @@
 		9B37184425E65A80003A3451 /* Gradi_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37184325E65A7F003A3451 /* Gradi_.swift */; };
 		9B37184A25E67180003A3451 /* FoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37184925E67180003A3451 /* FoodBar.swift */; };
 		9B37184C25E672D0003A3451 /* FoodItemScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37184B25E672D0003A3451 /* FoodItemScrollTableViewCell.swift */; };
+		9B3D7E91261C0F2700CC97E3 /* SurveyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3D7E90261C0F2700CC97E3 /* SurveyButton.swift */; };
 		9B43BBC325E36D8E0039D5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */; };
 		9B43BBC525E36D8E0039D5E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */; };
 		9B43BBC725E36D8E0039D5E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC625E36D8E0039D5E2 /* ViewController.swift */; };
@@ -127,6 +128,7 @@
 		9B37184325E65A7F003A3451 /* Gradi_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradi_.swift; sourceTree = "<group>"; };
 		9B37184925E67180003A3451 /* FoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBar.swift; sourceTree = "<group>"; };
 		9B37184B25E672D0003A3451 /* FoodItemScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemScrollTableViewCell.swift; sourceTree = "<group>"; };
+		9B3D7E90261C0F2700CC97E3 /* SurveyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyButton.swift; sourceTree = "<group>"; };
 		9B43BBBF25E36D8E0039D5E2 /* Café-Nibm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Café-Nibm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				9B2BD57525E3ABDC000A33BB /* RoundButton.swift */,
 				9B2BD56E25E36E00000A33BB /* Utilities.swift */,
 				9B37184325E65A7F003A3451 /* Gradi_.swift */,
+				9B3D7E90261C0F2700CC97E3 /* SurveyButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				9BF97F3E260F4E0600B9C1F4 /* Slide.swift in Sources */,
 				9B37184425E65A80003A3451 /* Gradi_.swift in Sources */,
 				9BD1E47625F07B9C004DF8C0 /* OrderScreenViewController.swift in Sources */,
+				9B3D7E91261C0F2700CC97E3 /* SurveyButton.swift in Sources */,
 				9B37184C25E672D0003A3451 /* FoodItemScrollTableViewCell.swift in Sources */,
 				9B2BD57025E36E00000A33BB /* Utilities.swift in Sources */,
 				9B2BD57225E37CCB000A33BB /* UHBCustomLabel.swift in Sources */,

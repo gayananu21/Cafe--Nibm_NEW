@@ -13,6 +13,19 @@ import FirebaseAuth
 
 
 class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+    
+    @IBOutlet weak var topView1_Width: NSLayoutConstraint!
+    
+    @IBOutlet weak var topView_1: UIView!
+    var titleLabel = UILabel()
+    var stackview = UIStackView()
+    
+    let button = SurveyButton()
+
+    var numberOfButtons = 0
+    var btnCount = Int()
+    var buttonArray = [String]()
+      var refFoodCategories: DatabaseReference!
 
    // @IBOutlet weak var emptyCartImage: UIImageView!
     
@@ -43,6 +56,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
     //list to store all the artist
      var foodList = [FoodModel]()
       var cartList = [CartModel]()
+   
     
    public func numberOfSections(in tableView: UITableView) -> Int {
         switch tableView {
@@ -201,7 +215,21 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //configureTitleLabel()
+                     configureStackView()
      
+       
+        
+        if(numberOfButtons<7){
+            topView1_Width.constant = 700
+            
+        }
+        
+        else{
+            
+            topView1_Width.constant = CGFloat((numberOfButtons + 1) * 117)
+        }
+              
         
        
         
@@ -217,6 +245,10 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
         for index in 10...45 {
             downData.append("Down Table Row \(index)")
         }
+        
+        
+        
+        
         
         //getting a reference to the node artists
                refFoods = Database.database().reference().child("Foods");
@@ -311,8 +343,197 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                 
                  
                })
+        
+       
 
     }
+    
+    
+    func configureStackView(){
+          topView_1.addSubview(stackview)
+          stackview.axis = .horizontal
+          stackview.distribution = .fillEqually
+          stackview.spacing = 0
+          
+          addButtonToStackView()
+          setStackViewConstraints()
+      }
+      
+      func addButtonToStackView() {
+        
+       
+        
+            
+            
+            //getting a reference to the node artists
+                   refFoodCategories = Database.database().reference().child("FoodCategories");
+            
+            
+                     
+                     //observing the data changes
+                          refFoodCategories.observe(DataEventType.value, with: { (snapshot) in
+                              
+                              //if the reference have some values
+                              if snapshot.childrenCount > 0 {
+                                  
+                                //clearing the list
+                                self.foodList.removeAll()
+                                 
+                                 self.numberOfButtons = Int(snapshot.childrenCount) - 1
+                                 
+                                  
+                                  //iterating through all the values
+                                  for Foodsd in snapshot.children.allObjects as! [DataSnapshot] {
+                                      //getting values
+                                      let foodObject = Foodsd.value as? [String: AnyObject]
+                                   
+                                      let categoryName  = foodObject?["name"]
+                                    //  let foodPrice = foodObject?["price"]
+                                      //let key = foodObject?["id"]
+                                        
+                                       
+                                    self.buttonArray.append(categoryName as! String)
+                      
+                                  }
+                                 
+                                
+                                
+                            }
+                            
+                            for i in 0...self.numberOfButtons{
+                                  
+                                  //the artist object
+                                             
+                                               //getting the artist of selected position
+                                               //category = categoryList[i]
+                                    
+                                    let button = SurveyButton()
+                                    
+                                    if(i % 2 == 0){
+                                        button.backgroundColor = .red
+                                    }
+                                    
+                                    else{
+                                        
+                                        button.backgroundColor = .green
+                                    }
+                                    
+
+                              
+                                
+                              button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
+                                    
+                                //  self.buttonArray = ["hellow","gayan"]
+                                    
+                                  button.setTitle("\(self.buttonArray[i])", for: .normal)
+                                   // button.setTitle("\(self.buttonArray[4])", for: .normal)
+                              self.stackview.addArrangedSubview(button)
+                            }
+                          })
+            
+            
+       
+          
+          
+          
+          
+        
+      }
+      
+    
+      
+      func setStackViewConstraints() {
+          
+          stackview.translatesAutoresizingMaskIntoConstraints                                                             = false
+          stackview.topAnchor.constraint(equalTo: topView_1.safeAreaLayoutGuide.topAnchor, constant: 0).isActive                         = true
+          stackview.leadingAnchor.constraint(equalTo: topView_1.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive      = true
+          stackview.trailingAnchor.constraint(equalTo: topView_1.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive    = true
+          stackview.bottomAnchor.constraint(equalTo: topView_1.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive       = true
+      }
+      
+      
+      @objc func buttonAction(_ sender: UIButton) {
+          
+         let title = sender.currentTitle
+         
+                     
+        
+              //getting a reference to the node artists
+              refFoods = Database.database().reference().child("Foods");
+                
+                //observing the data changes
+              let query = refFoods.queryOrdered(byChild: "type").queryEqual(toValue: "\(title ?? "")")
+                     query.observe(DataEventType.value, with: { (snapshot) in
+                         
+                         //if the reference have some values
+                         if snapshot.childrenCount > 0 {
+                             
+                             //clearing the list
+                             self.foodList.removeAll()
+                             //iterating through all the values
+                             for Foods in snapshot.children.allObjects as! [DataSnapshot] {
+                                 //getting values
+                                 let foodObject = Foods.value as? [String: AnyObject]
+                              
+                                 let foodName  = foodObject?["name"]
+                                 let foodDescription  = foodObject?["description"]
+                                 let foodPrice = foodObject?["price"]
+                                 let foodImage = foodObject?["foodImage"]
+                                 let key = foodObject?["id"]
+                               let availability = foodObject?["availability"]
+                                 
+                                 //creating artist object with model and fetched values
+                               let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
+                                 
+                                 //appending it to list
+                                 self.foodList.append(food)
+                               
+                               
+                              
+                               
+                               
+                               
+                             }
+                             
+                             //reloading the tableview
+                             self.downTableview.reloadData()
+                         }
+                        
+                         else{
+                            
+                            let alert = UIAlertController(title: "NOTICE", message: "There are no foods under: \(title ?? "") category!", preferredStyle: .alert)
+                                                alert.addAction(UIAlertAction(title: "Cansel", style: UIAlertAction.Style.destructive, handler: { action in
+                                                    switch action.style{
+                                                        case .default:
+                                                        print("default")
+                                                        
+                                                        case .cancel:
+                                                        print("cancel")
+                                                        
+                                                        case .destructive:
+                                                        print("destructive")
+                                                        
+                                                    }
+                                                }))
+                            
+                                  alert.addAction(UIAlertAction(title: "Add Food", style: .default, handler: { action in
+
+                                                      
+
+                                                     }))
+                                                         
+                                                self.present(alert, animated: true, completion: nil)
+                            
+                            
+                        }
+                     })
+                 
+               
+               
+       
+         
+          
+      }
     
     
     @IBAction func riceClicked(_ sender: Any) {
@@ -394,17 +615,38 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                            
                            //appending it to list
                            self.foodList.append(food)
-                         
-                         
-                        
-                         
-                         
-                         
+                 
                        }
                        
                        //reloading the tableview
                        self.downTableview.reloadData()
                    }
+                
+                else{
+                    
+                    let alert = UIAlertController(title: "ATTENTION", message: "There are no foods at cafe!", preferredStyle: .alert)
+                                        alert.addAction(UIAlertAction(title: "Cansel", style: UIAlertAction.Style.destructive, handler: { action in
+                                            switch action.style{
+                                                case .default:
+                                                print("default")
+                                                
+                                                case .cancel:
+                                                print("cancel")
+                                                
+                                                case .destructive:
+                                                print("destructive")
+                                                
+                                            }
+                                        }))
+                    alert.addAction(UIAlertAction(title: "Add Food", style: .default, handler: { action in
+
+                     
+
+                    }))
+                                        self.present(alert, animated: true, completion: nil)
+                    
+                    
+                }
                })
         
     }
