@@ -47,7 +47,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return cartList.count
     }
     
@@ -87,7 +87,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         
       
 
-        
+       
         tableView.beginUpdates()
         Database.database().reference().child("addCart/\(self.user?.uid ?? "")").child(fID).removeValue()
         tableView.endUpdates()

@@ -219,18 +219,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                      configureStackView()
      
        
-        
-        if(numberOfButtons<7){
-            topView1_Width.constant = 700
-            
-        }
-        
-        else{
-            
-            topView1_Width.constant = CGFloat((numberOfButtons + 1) * 117)
-        }
-              
-        
+       
        
         
        
@@ -274,7 +263,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                                   let foodPrice = foodObject?["price"]
                                   let foodImage = foodObject?["foodImage"]
                                   let key = foodObject?["id"]
-                                let availability = foodObject?["availability"]
+                                  let availability = foodObject?["availability"]
                                   
                                   //creating artist object with model and fetched values
                                 let food = FoodModel(description: foodDescription as! String?, name: foodName as! String?, price: foodPrice as! String?, foodImage: foodImage as! String?, key: key as! String?, availability: availability as! String?)
@@ -395,17 +384,23 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                                     self.buttonArray.append(categoryName as! String)
                       
                                   }
-                                 
-                                
-                                
+                       
                             }
                             
                             for i in 0...self.numberOfButtons{
                                   
-                                  //the artist object
-                                             
-                                               //getting the artist of selected position
-                                               //category = categoryList[i]
+                                 
+                                if(self.numberOfButtons<7){
+                                    self.topView1_Width.constant = 700
+                                            
+                                        }
+                                        
+                                        else{
+                                            
+                                    self.topView1_Width.constant = CGFloat((self.numberOfButtons + 1) * 117)
+                                        }
+                                              
+                                        
                                     
                                     let button = SurveyButton()
                                     
@@ -502,7 +497,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                          else{
                             
                             let alert = UIAlertController(title: "NOTICE", message: "There are no foods under: \(title ?? "") category!", preferredStyle: .alert)
-                                                alert.addAction(UIAlertAction(title: "Cansel", style: UIAlertAction.Style.destructive, handler: { action in
+                                                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.destructive, handler: { action in
                                                     switch action.style{
                                                         case .default:
                                                         print("default")
@@ -518,7 +513,11 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                             
                                   alert.addAction(UIAlertAction(title: "Add Food", style: .default, handler: { action in
 
-                                                      
+                                                      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                                      let vc = storyboard.instantiateViewController(withIdentifier: "ADD_MENU_TAB")
+                                                       vc.modalPresentationStyle = .fullScreen
+                                    vc.modalTransitionStyle = .partialCurl
+                                                      self.present(vc, animated: true)
 
                                                      }))
                                                          
@@ -625,7 +624,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                 else{
                     
                     let alert = UIAlertController(title: "ATTENTION", message: "There are no foods at cafe!", preferredStyle: .alert)
-                                        alert.addAction(UIAlertAction(title: "Cansel", style: UIAlertAction.Style.destructive, handler: { action in
+                                        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.destructive, handler: { action in
                                             switch action.style{
                                                 case .default:
                                                 print("default")
@@ -640,7 +639,11 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                                         }))
                     alert.addAction(UIAlertAction(title: "Add Food", style: .default, handler: { action in
 
-                     
+                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                     let vc = storyboard.instantiateViewController(withIdentifier: "ADD_MENU_TAB")
+                      vc.modalPresentationStyle = .fullScreen
+                     vc.modalTransitionStyle = .crossDissolve
+                     self.present(vc, animated: true)
 
                     }))
                                         self.present(alert, animated: true, completion: nil)
@@ -852,7 +855,27 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
           navigationController?.setNavigationBarHidden(true, animated: animated)
       }
     
+    @IBAction func onCategory(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ADD_CAT_TAB")
+         vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true)
+        
+        
+    }
     
+    @IBAction func onMenu(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ADD_MENU_TAB")
+         vc.modalPresentationStyle = .fullScreen
+       vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true)
+        
+        
+    }
 }
 
 
@@ -879,21 +902,7 @@ extension Try_1_ViewController: FoodStatusDelegate {
         
         
         
-            let alert = UIAlertController(title: "Alert", message: "switch on", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                switch action.style{
-                    case .default:
-                    print("default")
-                    
-                    case .cancel:
-                    print("cancel")
-                    
-                    case .destructive:
-                    print("destructive")
-                    
-                }
-            }))
-            self.present(alert, animated: true, completion: nil)
+            
             
             
                   
@@ -910,21 +919,7 @@ extension Try_1_ViewController: FoodStatusDelegate {
                          food = foodList[Index]
             
             
-                      let alert = UIAlertController(title: "Alert", message: "switch off", preferredStyle: .alert)
-                      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                          switch action.style{
-                              case .default:
-                              print("default")
-                              
-                              case .cancel:
-                              print("cancel")
-                              
-                              case .destructive:
-                              print("destructive")
-                              
-                          }
-                      }))
-                      self.present(alert, animated: true, completion: nil)
+                    
                   
                   
         
