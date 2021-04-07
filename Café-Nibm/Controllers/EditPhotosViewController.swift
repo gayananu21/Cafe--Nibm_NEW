@@ -63,10 +63,12 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
     
     let storageDel = Storage.storage()
      
-        
+   
+    
     let defaultImage = UIImage(systemName: "plus")
       
-        
+  
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             

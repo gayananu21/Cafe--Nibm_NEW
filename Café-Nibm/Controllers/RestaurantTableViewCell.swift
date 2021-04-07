@@ -21,7 +21,8 @@ class RestaurantTableViewCell: UITableViewCell {
   
     @IBOutlet weak var foodSwitch: UISwitch!
     
-
+    @IBOutlet weak var foodUnView: UIView!
+    
     @IBOutlet weak var foodPriceType: UILabel!
     @IBOutlet weak var foodDiscount: RoundLabel!
     @IBOutlet weak var foodStatusImage: UIImageView!

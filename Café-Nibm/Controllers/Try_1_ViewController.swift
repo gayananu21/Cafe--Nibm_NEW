@@ -14,6 +14,7 @@ import FirebaseAuth
 
 class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
+  
     @IBOutlet weak var topView1_Width: NSLayoutConstraint!
     
     @IBOutlet weak var topView_1: UIView!
@@ -165,6 +166,10 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                 cell.foodDiscount.backgroundColor = .systemRed
                  cell.foodDiscount.borderColor = .systemRed
                 
+                cell.foodUnView.alpha = 0.5
+                
+                
+                
                 
                 
                 cell.foodSwitch.setOn(true, animated: true)
@@ -173,6 +178,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
              if (food.availability == "off"){
                 
                 
+                cell.foodUnView.alpha = 0
                 
                cell.foodStatusImage.image = UIImage(named:"orderRight")
                 

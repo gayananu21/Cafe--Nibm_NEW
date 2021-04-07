@@ -26,6 +26,9 @@ class SurveyButton: UIButton {
         backgroundColor = .red
         titleLabel?.font = UIFont(name: "montserrat_light", size: 20)
         layer.cornerRadius = 10
+        
+        
+        
     }
 
 }
