@@ -10,8 +10,17 @@ import UIKit
 import Firebase
 import Kingfisher
 import FirebaseAuth
+import FirebaseStorage
+import Lottie
 
-class AddMenuFoodViewController: UIViewController {
+class AddMenuFoodViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
+    
+    
+    @IBOutlet weak var eView: UIView!
+       
+
+       let lottieView = AnimationView()
+    
     
     @IBOutlet weak var featuredImage: UIImageView!
     @IBOutlet weak var foodDescription: UITextView!
@@ -19,17 +28,27 @@ class AddMenuFoodViewController: UIViewController {
     @IBOutlet weak var foodPrice: UITextField!
     @IBOutlet weak var foodName: UITextField!
     var refFoodMenus: DatabaseReference!
+      var refAddNewFood: DatabaseReference!
     
     var numberOfButtons = 0
     var buttonArray = [String]()
 
+    @IBOutlet weak var checkboxButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
     
+    
+    
+     private let storage = Storage.storage().reference()
     
     @IBOutlet weak var selectedButton: GradientView!
     
     
     @IBOutlet var cityButtons = [UIButton]()
+    
+    var fName = ""
+    
+    var isChecked = false
+    
     
     
     @IBAction func handleSelection(_ sender: UIButton) {
@@ -53,10 +72,6 @@ class AddMenuFoodViewController: UIViewController {
         if(self.foodName.text != ""){
             
             VC1.newMenuFood = foodName.text ?? ""
-            VC1.foodPrice = foodPrice.text ?? ""
-            VC1.discount = foodDiscount.text ?? ""
-            VC1.foodDescription = foodDescription.text ?? ""
-            VC1.featuredImage = featuredImage.image!
             
                    
             self.navigationController?.modalPresentationStyle = .none
@@ -85,10 +100,51 @@ class AddMenuFoodViewController: UIViewController {
         
         configureStackView()
         
+        self.foodName.text = self.fName
+        
+        
+         refAddNewFood = Database.database().reference().child("Foods");
+        
        
+
+        //Looks for single or multiple taps.
+             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+                   //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+                   //tap.cancelsTouchesInView = false
+
+             view.addGestureRecognizer(tap)
+        
+        
+        
+        
+        self.lottieView.alpha = 1
+                                                self.lottieView.animation = Animation.named("Pen")
+                                                //let lottieView = AnimationView(animation: loadingAnimation)
+                                                    // 2. SECOND STEP (Adding and setup):
+                                                self.eView.addSubview(self.lottieView)
+                                                self.lottieView.contentMode = .scaleAspectFit
+                                                self.lottieView.loopMode = .autoReverse
+                                                self.lottieView.play(toFrame: .infinity)
+                                                    // 3. THIRD STEP (LAYOUT PREFERENCES):
+                                                self.lottieView.translatesAutoresizingMaskIntoConstraints = false
+                                                    NSLayoutConstraint.activate([
+                                                        self.lottieView.leftAnchor.constraint(equalTo: self.eView.leftAnchor),
+                                                        self.lottieView.rightAnchor.constraint(equalTo: self.eView.rightAnchor),
+                                                        self.lottieView.topAnchor.constraint(equalTo: self.eView.topAnchor),
+                                                        self.lottieView.bottomAnchor.constraint(equalTo: self.eView.bottomAnchor)
+                                                    ])
 
         
     }
+    
+    @objc func dismissKeyboard() {
+                  //Causes the view (or one of its embedded text fields) to resign the first responder status.
+                  view.endEditing(true)
+              }
+       
+    
+    
     
     func configureStackView(){
         
@@ -224,6 +280,190 @@ class AddMenuFoodViewController: UIViewController {
         self.present(vc, animated: true)
         
     }
+    @IBAction func onCheckBoxTapped(_ sender: Any) {
+        
+        toggleCheckBoc()
+    }
+    
+    func toggleCheckBoc(){
+           self.isChecked = !isChecked
+           
+           if self.isChecked {
+            let image = UIImage(named: "checkBox") as UIImage?
+               
+            
+            self.checkboxButton.setImage(image, for: .normal)
+           }
+           
+           else{
+            
+            let image = UIImage(named: "emptyCheckBox") as UIImage?
+               
+            
+            self.checkboxButton.setImage(image, for: .normal)
+
+            
+       
+            
+               
+           }
+           
+       }
+    
+    @IBAction func onAddFeaturedImage(_ sender: Any) {
+        
+        
+        
+        
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker,animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        picker.dismiss(animated: true, completion: nil)
+        
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            
+            return
+        }
+        
+        guard let imageData = image.pngData() else{
+            return
+        }
+        
+       
+        
+        storage.child("featured images/\(self.foodName.text ?? "")/featuredImage.jpg").putData(imageData, metadata: nil, completion: {_, error in
+            guard error == nil else {
+                print("Failed to upload")
+                
+                let alert = UIAlertController(title: "Error", message: "Failed to uplod new image!", preferredStyle: UIAlertController.Style.alert)
+
+                                                                                                                                                 // add the actions (buttons)
+                                                                                                                                                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                                                                                                                                 
+                                                                                                                                                 // show the alert
+                                                                                                                                                 self.present(alert, animated: true, completion: nil)
+                return
+            }
+        })
+        
+        storage.child("featured images/\(self.foodName.text ?? "")/featuredImage.jpg").downloadURL(completion: {url, error in
+            guard let url = url, error == nil else{
+                return
+                
+            }
+            let urlString = url.absoluteString
+            
+            DispatchQueue.main.async {
+                
+                           self.featuredImage.image = image
+                // create the alert
+                                                    let alert = UIAlertController(title: "Success", message: "Image uploaded successfully!", preferredStyle: UIAlertController.Style.alert)
+
+                                                                // add the actions (buttons)
+                                                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                                                                            
+                                                                // show the alert
+                                                        self.present(alert, animated: true, completion: nil)
+                       }
+            print("Download URL: \(urlString)")
+            UserDefaults.standard.set(urlString, forKey: "url")
+        })
+    }
+  
+    
+    
+    
+       func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+           
+           picker.dismiss(animated: true, completion: nil)
+       }
+    
+    override func viewWillAppear(_ animated: Bool) {
+                  super.viewWillAppear(animated)
+                  navigationController?.setNavigationBarHidden(true, animated: animated)
+                  
+                  
+              }
+
+              override func viewWillDisappear(_ animated: Bool) {
+                  super.viewWillDisappear(animated)
+                  navigationController?.setNavigationBarHidden(false, animated: animated)
+                     
+              }
+       
+    @IBAction func onAddNewItem(_ sender: Any) {
+        
+        if(self.foodName.text != "" && self.foodPrice.text != "" && self.foodDescription.text != "Add Food Description" && self.selectedButton.currentTitle != "Select Item Category") {
+            
+            if(self.isChecked == false){
+                
+                let alert = UIAlertController(title: "NOTICE", message: "Please confirm sell it as a item.", preferredStyle: UIAlertController.Style.alert)
+
+                                           // add the actions (buttons)
+                               alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                                                       
+                                           // show the alert
+                                   self.present(alert, animated: true, completion: nil)
+                
+            }
+            else{
+                
+                guard let urlString = UserDefaults.standard.value(forKey: "url") as? String,
+                                   let url = URL(string: urlString)   else {
+                                      return
+                                  }
+                
+                
+                
+                let key = refAddNewFood.childByAutoId().key
+                
+               
+                
+                
+                //creating artist with the given values
+                        let newFood = [
+                                        "id":key,
+                                        "name": foodName.text! as String,
+                                        "price": foodPrice.text! as String,
+                                        "discount": foodDiscount.text! as String,
+                                        "description": foodDescription.text! as String,
+                                        "type": selectedButton.currentTitle! as String,
+                                        "availability": "on",
+                                        "foodImage": urlString
+                                        
+                                      ]
+                
+                //adding the artist inside the generated unique key
+                         refAddNewFood.child(key!).setValue(newFood)
+                
+                
+               
+            }
+            
+        }
+        
+        else{
+            
+            let alert = UIAlertController(title: "Error", message: "Please make sure all the fields are filled!", preferredStyle: UIAlertController.Style.alert)
+
+                                                                        // add the actions (buttons)
+                                                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                                                                                    
+                                                                        // show the alert
+                                                                self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -31,13 +31,8 @@ class AddNewCollectionImagesViewController: UIViewController, UIImagePickerContr
     @IBOutlet weak var label_05: UILabel!
     
     var newMenuFood = ""
-    var foodPrice = ""
-    var discount = ""
-    var category = ""
-    var foodDescription = ""
-    var featuredImage = UIImage()
     
-    
+ 
     
         var refRemoveImage: DatabaseReference!
     
@@ -78,27 +73,7 @@ class AddNewCollectionImagesViewController: UIViewController, UIImagePickerContr
     
     let defaultImage = UIImage(systemName: "plus")
       
-    @IBAction func onBackTapped(_ sender: Any) {
-        
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                                                           let VC1 = storyBoard.instantiateViewController(withIdentifier: "ADD_MENU_FOOD") as! AddMenuFoodViewController
-              
-              
-        
-        if(self.newMenuFood != nil){
-            
-             VC1.foodName.text = self.newMenuFood
-        }
-        
-                  
-                
-                          VC1.modalPresentationStyle = .fullScreen
-                         VC1.modalTransitionStyle = .crossDissolve
-                         self.present(VC1, animated: true)
-              
-        
-    }
+    
     
     
         override func viewDidLoad() {
@@ -827,7 +802,7 @@ class AddNewCollectionImagesViewController: UIViewController, UIImagePickerContr
         
         override func viewWillAppear(_ animated: Bool) {
                super.viewWillAppear(animated)
-               navigationController?.setNavigationBarHidden(true, animated: animated)
+               navigationController?.setNavigationBarHidden(false, animated: animated)
                
                
            }
@@ -838,6 +813,7 @@ class AddNewCollectionImagesViewController: UIViewController, UIImagePickerContr
                   
            }
     
+  
 
 }
 
