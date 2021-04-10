@@ -18,6 +18,16 @@
 		9B0D42C525E4D13400F06C91 /* ResturantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D42C425E4D13400F06C91 /* ResturantViewController.swift */; };
 		9B0D42C825E4D5C700F06C91 /* FoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D42C725E4D5C700F06C91 /* FoodItemViewController.swift */; };
 		9B15B8C5261AC2A6003BC4DA /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15B8C4261AC2A6003BC4DA /* SignUpScreenViewController.swift */; };
+		9B21A7DC261F290F0049FA9C /* AdminOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7DB261F290F0049FA9C /* AdminOrdersViewController.swift */; };
+		9B21A7E2261F38AD0049FA9C /* NewOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7E1261F38AD0049FA9C /* NewOrderTableViewCell.swift */; };
+		9B21A7E4261F38BD0049FA9C /* ReadyOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7E3261F38BD0049FA9C /* ReadyOrderTableViewCell.swift */; };
+		9B21A7E6261F38DB0049FA9C /* ProcessingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7E5261F38DA0049FA9C /* ProcessingOrderTableViewCell.swift */; };
+		9B21A7E8261F390F0049FA9C /* NewOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7E7261F390F0049FA9C /* NewOrder.swift */; };
+		9B21A7EA261F39210049FA9C /* ReadyOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7E9261F39210049FA9C /* ReadyOrder.swift */; };
+		9B21A7EC261F39340049FA9C /* ProcessingOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7EB261F39340049FA9C /* ProcessingOrder.swift */; };
+		9B21A7EE261FE42E0049FA9C /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7ED261FE42D0049FA9C /* OrderDetailsViewController.swift */; };
+		9B21A7F0261FE4D40049FA9C /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7EF261FE4D40049FA9C /* OrderDetailTableViewCell.swift */; };
+		9B21A7F2261FE5120049FA9C /* OrderDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21A7F1261FE5120049FA9C /* OrderDetailModel.swift */; };
 		9B2BD57025E36E00000A33BB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BD56E25E36E00000A33BB /* Utilities.swift */; };
 		9B2BD57225E37CCB000A33BB /* UHBCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BD57125E37CCB000A33BB /* UHBCustomLabel.swift */; };
 		9B2BD57425E39783000A33BB /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BD57325E39783000A33BB /* LoginScreenViewController.swift */; };
@@ -46,6 +56,9 @@
 		9B43BBDA25E36D950039D5E2 /* Cafe__NibmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBD925E36D950039D5E2 /* Cafe__NibmTests.swift */; };
 		9B43BBE525E36D950039D5E2 /* Cafe__NibmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */; };
 		9B44123325E6AC8C00A0445A /* Try_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */; };
+		9B6F1DB526209E650008FCA4 /* AdminAcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */; };
+		9B6F1DB726209E8E0008FCA4 /* AdminAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DB626209E8E0008FCA4 /* AdminAccountTableViewCell.swift */; };
+		9B6F1DBB26209EE00008FCA4 /* AdminAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DBA26209EE00008FCA4 /* AdminAccountModel.swift */; };
 		9B75A46325E7F25A00F20165 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46225E7F25900F20165 /* OrderViewController.swift */; };
 		9B75A46525E7F3D700F20165 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46425E7F3D700F20165 /* OrderTableViewCell.swift */; };
 		9B75A46725E8091700F20165 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75A46625E8091700F20165 /* ProfileViewController.swift */; };
@@ -121,6 +134,16 @@
 		9B0D42C425E4D13400F06C91 /* ResturantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResturantViewController.swift; path = ../ResturantViewController.swift; sourceTree = "<group>"; };
 		9B0D42C725E4D5C700F06C91 /* FoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewController.swift; sourceTree = "<group>"; };
 		9B15B8C4261AC2A6003BC4DA /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
+		9B21A7DB261F290F0049FA9C /* AdminOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersViewController.swift; sourceTree = "<group>"; };
+		9B21A7E1261F38AD0049FA9C /* NewOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderTableViewCell.swift; sourceTree = "<group>"; };
+		9B21A7E3261F38BD0049FA9C /* ReadyOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyOrderTableViewCell.swift; sourceTree = "<group>"; };
+		9B21A7E5261F38DA0049FA9C /* ProcessingOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingOrderTableViewCell.swift; sourceTree = "<group>"; };
+		9B21A7E7261F390F0049FA9C /* NewOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrder.swift; sourceTree = "<group>"; };
+		9B21A7E9261F39210049FA9C /* ReadyOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyOrder.swift; sourceTree = "<group>"; };
+		9B21A7EB261F39340049FA9C /* ProcessingOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingOrder.swift; sourceTree = "<group>"; };
+		9B21A7ED261FE42D0049FA9C /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderDetailsViewController.swift; path = ../OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		9B21A7EF261FE4D40049FA9C /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		9B21A7F1261FE5120049FA9C /* OrderDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailModel.swift; sourceTree = "<group>"; };
 		9B2BD56E25E36E00000A33BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9B2BD57125E37CCB000A33BB /* UHBCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHBCustomLabel.swift; sourceTree = "<group>"; };
 		9B2BD57325E39783000A33BB /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +178,9 @@
 		9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe__NibmUITests.swift; sourceTree = "<group>"; };
 		9B43BBE625E36D950039D5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try_1_ViewController.swift; sourceTree = "<group>"; };
+		9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminAcountViewController.swift; path = ../AdminAcountViewController.swift; sourceTree = "<group>"; };
+		9B6F1DB626209E8E0008FCA4 /* AdminAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminAccountTableViewCell.swift; path = ../../AdminAccountTableViewCell.swift; sourceTree = "<group>"; };
+		9B6F1DBA26209EE00008FCA4 /* AdminAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAccountModel.swift; sourceTree = "<group>"; };
 		9B75A46225E7F25900F20165 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		9B75A46425E7F3D700F20165 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		9B75A46625E8091700F20165 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +267,11 @@
 				9BD1E47925F07BE1004DF8C0 /* OrderScreenModel.swift */,
 				9B04F8D425F4BDA1003FF072 /* CollectionModel.swift */,
 				9B368343261CA73B00457C84 /* Category.swift */,
+				9B21A7E7261F390F0049FA9C /* NewOrder.swift */,
+				9B21A7E9261F39210049FA9C /* ReadyOrder.swift */,
+				9B21A7EB261F39340049FA9C /* ProcessingOrder.swift */,
+				9B21A7F1261FE5120049FA9C /* OrderDetailModel.swift */,
+				9B6F1DBA26209EE00008FCA4 /* AdminAccountModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +289,11 @@
 				9B31874425EDFB37007765CA /* CartTableViewCell.swift */,
 				9BD1E47725F07BC6004DF8C0 /* OrderScreenTableViewCell.swift */,
 				9B368345261CA7DD00457C84 /* CategoryTableViewCell.swift */,
+				9B21A7E1261F38AD0049FA9C /* NewOrderTableViewCell.swift */,
+				9B21A7E3261F38BD0049FA9C /* ReadyOrderTableViewCell.swift */,
+				9B21A7E5261F38DA0049FA9C /* ProcessingOrderTableViewCell.swift */,
+				9B21A7EF261FE4D40049FA9C /* OrderDetailTableViewCell.swift */,
+				9B6F1DB626209E8E0008FCA4 /* AdminAccountTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,9 +344,9 @@
 				9BF556FD26088BDD0060092A /* AnimationAssests */,
 				9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */,
 				9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */,
-				9B43BBC825E36D8E0039D5E2 /* Main.storyboard */,
 				9B43BBCB25E36D940039D5E2 /* Assets.xcassets */,
 				9B43BBCD25E36D940039D5E2 /* LaunchScreen.storyboard */,
+				9B43BBC825E36D8E0039D5E2 /* Main.storyboard */,
 				9BFAC95025EBB31B00B87075 /* GoogleService-Info.plist */,
 				9B43BBD025E36D940039D5E2 /* Info.plist */,
 			);
@@ -349,7 +385,6 @@
 				9B368341261C48A600457C84 /* AddMenuFoodViewController.swift */,
 				9B75A46625E8091700F20165 /* ProfileViewController.swift */,
 				9B75A46225E7F25900F20165 /* OrderViewController.swift */,
-				9B31874625EDFB56007765CA /* CartViewController.swift */,
 				9BD1E47525F07B9C004DF8C0 /* OrderScreenViewController.swift */,
 				9BFAC94825EBA3D700B87075 /* TestViewController.swift */,
 				9BF809AA25F38959003CA392 /* Image_Test_ViewController.swift */,
@@ -363,6 +398,10 @@
 				9B0D42C725E4D5C700F06C91 /* FoodItemViewController.swift */,
 				9BFAA26A2611AD4E00FA9E96 /* EditPhotosViewController.swift */,
 				9BEA666C261DD4B500BB91E6 /* AddNewCollectionImagesViewController.swift */,
+				9B31874625EDFB56007765CA /* CartViewController.swift */,
+				9B21A7DB261F290F0049FA9C /* AdminOrdersViewController.swift */,
+				9B21A7ED261FE42D0049FA9C /* OrderDetailsViewController.swift */,
+				9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */,
 				9B0D42C625E4D2D200F06C91 /* Views */,
 			);
 			path = Controllers;
@@ -732,6 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6F1DB726209E8E0008FCA4 /* AdminAccountTableViewCell.swift in Sources */,
 				9B37184A25E67180003A3451 /* FoodBar.swift in Sources */,
 				9BD1E47A25F07BE1004DF8C0 /* OrderScreenModel.swift in Sources */,
 				9B04F8D525F4BDA1003FF072 /* CollectionModel.swift in Sources */,
@@ -743,6 +783,8 @@
 				9BF5570F260913CF0060092A /* NoNetworkViewController.swift in Sources */,
 				9B75A46925E8BA2100F20165 /* ProfileUITableViewCell.swift in Sources */,
 				9B75A46525E7F3D700F20165 /* OrderTableViewCell.swift in Sources */,
+				9B21A7F0261FE4D40049FA9C /* OrderDetailTableViewCell.swift in Sources */,
+				9B21A7EE261FE42E0049FA9C /* OrderDetailsViewController.swift in Sources */,
 				9B31874725EDFB56007765CA /* CartViewController.swift in Sources */,
 				9B43BBC325E36D8E0039D5E2 /* AppDelegate.swift in Sources */,
 				9B0D42C325E4D09800F06C91 /* RestaurantTableViewCell.swift in Sources */,
@@ -751,38 +793,48 @@
 				9B2BD57625E3ABDC000A33BB /* RoundButton.swift in Sources */,
 				9BFAC94925EBA3D700B87075 /* TestViewController.swift in Sources */,
 				9B9BF52725E56BA2002F0B53 /* HomeCartTableViewCell.swift in Sources */,
+				9B21A7E8261F390F0049FA9C /* NewOrder.swift in Sources */,
 				9BF809AB25F38959003CA392 /* Image_Test_ViewController.swift in Sources */,
+				9B21A7EA261F39210049FA9C /* ReadyOrder.swift in Sources */,
 				9BFAA26B2611AD4F00FA9E96 /* EditPhotosViewController.swift in Sources */,
 				9B368344261CA73B00457C84 /* Category.swift in Sources */,
 				9B75A46B25E8C1A900F20165 /* Profile_1_TableViewCell.swift in Sources */,
 				9B04F8D925F51B13003FF072 /* LOGViewController.swift in Sources */,
+				9B6F1DBB26209EE00008FCA4 /* AdminAccountModel.swift in Sources */,
 				9B368342261C48A600457C84 /* AddMenuFoodViewController.swift in Sources */,
+				9B21A7DC261F290F0049FA9C /* AdminOrdersViewController.swift in Sources */,
 				9BE481642605DC52006DB71D /* Order_History_Detail_ViewController.swift in Sources */,
 				9BEA666D261DD4B500BB91E6 /* AddNewCollectionImagesViewController.swift in Sources */,
+				9B21A7E4261F38BD0049FA9C /* ReadyOrderTableViewCell.swift in Sources */,
 				9B15B8C5261AC2A6003BC4DA /* SignUpScreenViewController.swift in Sources */,
 				9BD1E47825F07BC6004DF8C0 /* OrderScreenTableViewCell.swift in Sources */,
 				9BF97F3A260F4DDA00B9C1F4 /* OnboardingController.swift in Sources */,
+				9B6F1DB526209E650008FCA4 /* AdminAcountViewController.swift in Sources */,
 				9B2BD57425E39783000A33BB /* LoginScreenViewController.swift in Sources */,
 				9B0D427D25E42BD600F06C91 /* ForgotPasswordViewController.swift in Sources */,
 				9B31873D25ED4865007765CA /* OrdersModel.swift in Sources */,
+				9B21A7F2261FE5120049FA9C /* OrderDetailModel.swift in Sources */,
 				9B0D42C525E4D13400F06C91 /* ResturantViewController.swift in Sources */,
 				9B75A46325E7F25A00F20165 /* OrderViewController.swift in Sources */,
 				9B43BBC525E36D8E0039D5E2 /* SceneDelegate.swift in Sources */,
 				9BDB570625E4F2D4003DC9B1 /* SampleSliderViewController.swift in Sources */,
 				9B0D42C125E4D08600F06C91 /* Food.swift in Sources */,
 				9B01F2CB25F5D3E000292A5C /* Home_Tab_ViewController.swift in Sources */,
+				9B21A7EC261F39340049FA9C /* ProcessingOrder.swift in Sources */,
 				9BFAC94B25EBA81A00B87075 /* ArtistModel.swift in Sources */,
 				9BE481602604B2D7006DB71D /* Location_NAV_ViewController.swift in Sources */,
 				9B31873F25ED55E2007765CA /* profileRecentModel.swift in Sources */,
 				9B01F2CD25F5FFF200292A5C /* LocationViewController.swift in Sources */,
 				9BF97F3E260F4E0600B9C1F4 /* Slide.swift in Sources */,
 				9B37184425E65A80003A3451 /* Gradi_.swift in Sources */,
+				9B21A7E6261F38DB0049FA9C /* ProcessingOrderTableViewCell.swift in Sources */,
 				9BD1E47625F07B9C004DF8C0 /* OrderScreenViewController.swift in Sources */,
 				9B3D7E91261C0F2700CC97E3 /* SurveyButton.swift in Sources */,
 				9B37184C25E672D0003A3451 /* FoodItemScrollTableViewCell.swift in Sources */,
 				9B2BD57025E36E00000A33BB /* Utilities.swift in Sources */,
 				9B2BD57225E37CCB000A33BB /* UHBCustomLabel.swift in Sources */,
 				9B368340261C489400457C84 /* AddCategoryViewController.swift in Sources */,
+				9B21A7E2261F38AD0049FA9C /* NewOrderTableViewCell.swift in Sources */,
 				9B31874125ED62BE007765CA /* profileRecentModel1.swift in Sources */,
 				9B44123325E6AC8C00A0445A /* Try_1_ViewController.swift in Sources */,
 				9B31874525EDFB37007765CA /* CartTableViewCell.swift in Sources */,

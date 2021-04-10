@@ -858,7 +858,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
 
       override func viewWillDisappear(_ animated: Bool) {
           super.viewWillDisappear(animated)
-          navigationController?.setNavigationBarHidden(true, animated: animated)
+          navigationController?.setNavigationBarHidden(false, animated: animated)
       }
     
     @IBAction func onCategory(_ sender: Any) {

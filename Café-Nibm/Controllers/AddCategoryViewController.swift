@@ -41,6 +41,10 @@ class AddCategoryViewController: UIViewController, UITableViewDelegate, UITableV
      var categoryId = ""
     
     
+
+     
+    
+    
     
           public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
               return categoryList.count
@@ -113,15 +117,7 @@ class AddCategoryViewController: UIViewController, UITableViewDelegate, UITableV
                  return 100
              }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           print("you tap on \(indexPath.row)")
-           
-           
-          
-           
-           
-       }
-           
+     
     
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
            return true
