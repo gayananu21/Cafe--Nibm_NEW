@@ -46,8 +46,15 @@ class ProcessingOrderTableViewCell: UITableViewCell {
             if(sender.currentTitle != "Ready"){
                 
                 self.selectedButton.setTitle(sender.currentTitle, for: .normal)
+                
             }
-              
+            
+            if(sender.currentTitle != "Preparing"){
+                          
+                          self.selectedButton.setTitle(sender.currentTitle, for: .normal)
+                      }
+            
+            
              // self.selectedButton.setTitle(sender.currentTitle, for: .normal)
               
               

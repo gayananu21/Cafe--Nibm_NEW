@@ -108,68 +108,7 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.view.endEditing(true)
         
-        refCarts = Database.database().reference().child("order history");
-                               
-                               //observing the data changes
-                                   // refCarts.observe(DataEventType.value, with: { (snapshot) in
-                                        
-                                       let query_process = refCarts.queryOrdered(byChild: "date")
-                                     query_process.observe(DataEventType.value, with: { (snapshot) in
-                                       
-                                        //if the reference have some values
-                                        if snapshot.childrenCount > 0 {
-                                          
-                                         
-                                          
-                                      
-                                          
-                                         
-                                            //clearing the list
-                                            self.cartList.removeAll()
-                                           
-                                          // self.animationView.alpha = 0
-                                            //iterating through all the values
-                                            for carts in snapshot.children.allObjects as! [DataSnapshot] {
-                                                //getting values
-                                                let cartObject = carts.value as? [String: AnyObject]
-                                               let orderId  = carts.key
-                                                let amount  = cartObject?["amount"]
-                                                let date = cartObject?["date"]
-                                               
-                                              
-                                              //self.total += cartAmount as! Int
-                                            
-                                             
-                                               
-                                                   
-                                                   //creating artist object with model and fetched values
-                                                   let cart = AdminAccountModel(orderId: orderId as! String?, amount: amount as! String?,date: date as! String?)
-                                                      
-                                                   
-                                                      //appending it to list
-                                                      self.cartList.append(cart)
-                                                   
-                                                    self.cartTableView.reloadData()
-                                                   
-                                               
-                                                
-                                             
-                                             
-                                                
-                                              
-                                              
-                                              
-                                            }
-                                            
-                                            //reloading the tableview
-                                            self.cartTableView.reloadData()
-                                        }
-                                      
-                                       
-                                      
-                                     
-                                      
-                                    })
+       
         
         
         
@@ -207,68 +146,7 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.view.endEditing(true)
         
-        refCarts = Database.database().reference().child("order history");
-                               
-                               //observing the data changes
-                                   // refCarts.observe(DataEventType.value, with: { (snapshot) in
-                                        
-                                       let query_process = refCarts.queryOrdered(byChild: "date")
-                                     query_process.observe(DataEventType.value, with: { (snapshot) in
-                                       
-                                        //if the reference have some values
-                                        if snapshot.childrenCount > 0 {
-                                          
-                                         
-                                          
-                                      
-                                          
-                                         
-                                            //clearing the list
-                                            self.cartList.removeAll()
-                                           
-                                          // self.animationView.alpha = 0
-                                            //iterating through all the values
-                                            for carts in snapshot.children.allObjects as! [DataSnapshot] {
-                                                //getting values
-                                                let cartObject = carts.value as? [String: AnyObject]
-                                               let orderId  = carts.key
-                                                let amount  = cartObject?["amount"]
-                                                let date = cartObject?["date"]
-                                               
-                                              
-                                              //self.total += cartAmount as! Int
-                                            
-                                             
-                                               
-                                                   
-                                                   //creating artist object with model and fetched values
-                                                   let cart = AdminAccountModel(orderId: orderId as! String?, amount: amount as! String?,date: date as! String?)
-                                                      
-                                                   
-                                                      //appending it to list
-                                                      self.cartList.append(cart)
-                                                   
-                                                    self.cartTableView.reloadData()
-                                                   
-                                               
-                                                
-                                             
-                                             
-                                                
-                                              
-                                              
-                                              
-                                            }
-                                            
-                                            //reloading the tableview
-                                            self.cartTableView.reloadData()
-                                        }
-                                      
-                                       
-                                      
-                                     
-                                      
-                                    })
+       
         
         
         
@@ -302,8 +180,12 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
                         //observing the data changes
                             // refCarts.observe(DataEventType.value, with: { (snapshot) in
                                  
-        let query_process = refCarts.queryOrdered(byChild: "date").queryStarting(atValue:"12/01/21").queryEnding(atValue:"02/09/2021")
-                              query_process.observe(DataEventType.value, with: { (snapshot) in
+       // query_process.observe(.value, with: { snapshot in
+        let query_process = refCarts.queryOrdered(byChild: "date").queryStarting(atValue:"02/01/2021").queryEnding(atValue:"20/03/2021")
+                   //           query_process.observe(DataEventType.value, with: { (snapshot) in
+        
+        query_process.observe(.value, with: { snapshot in
+            //query_process.ob
                                 
                                  //if the reference have some values
                                  if snapshot.childrenCount > 0 {

@@ -122,15 +122,12 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
              default:
             print("Some things Wrong!!")
         }
-         return cartList.count
+         return 0
       }
       
     
    
-      public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-          return true
-      }
-      
+     
  
       
       public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -187,6 +184,10 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                     
                     cell.orderId.text = cart.orderId
             
+            //returning cell
+            return cell
+            
+            
             
          case readyOrdersTableView:
             
@@ -206,6 +207,9 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                            //adding values to labels
                            
                            cell.orderId.text = cart.orderId
+            
+            //returning cell
+            return cell
             
          default:
             print("Some things Wrong!!")
@@ -237,102 +241,104 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
         
         //getting a reference to the node artists
                    refGetReadyOrders = Database.database().reference().child("order status");
-                        
-                        //observing the data changes
-                             let query = refGetOrderInfo.queryOrdered(byChild: "status").queryEqual(toValue: "pending")
-                                           query.observe(DataEventType.value, with: { (snapshot) in
-                                 
-                                 //if the reference have some values
-                                 if snapshot.childrenCount > 0 {
-                                   
-                                  
-                                   
-                               
-                                   
-                                  
-                                     //clearing the list
-                                     self.cartList.removeAll()
-                                    
-                                   // self.animationView.alpha = 0
-                                     //iterating through all the values
-                                     for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
-                                         //getting values
-                                        
-                                        self.noOrders.text = String(snapshot.childrenCount)
-                                      
-                                        let cartObject = newOrders.value as? [String: AnyObject]
-                                        let userId  = cartObject?["userId"]
-                                        let orderId  = cartObject?["orderId"]
-                                        let dataKey = cartObject?["key"]
-
-                                        
-                                       //creating artist object with model and fetched values
-                                        let food = NewOrderModel(userId: userId as! String?, orderId: orderId as! String?, dataKey: dataKey as! String?)
-                                                                      
-                                        
-                                                                      //appending it to list
-                                                self.cartList.append(food)
-                                
-                                       
-                                     }
-                                     
-                                     //reloading the tableview
-                                     self.newOrdersTableView.reloadData()
-                                 }
-                               
-                               
-                              
-                               
-                             })
-        
         
         //observing the data changes
-        let query_process = refGetOrderInfo.queryOrdered(byChild: "status").queryEqual(toValue: "preparing")
-                                                 query_process.observe(DataEventType.value, with: { (snapshot) in
-                                       
-                                       //if the reference have some values
-                                       if snapshot.childrenCount > 0 {
-                                         
-                                        
-                                         
-                                     
-                                         
-                                        
-                                           //clearing the list
-                                           self.processingList.removeAll()
-                                          
-                                         // self.animationView.alpha = 0
-                                           //iterating through all the values
-                                           for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
-                                               //getting values
+               let query_process = refGetProcessingOrders.queryOrdered(byChild: "status").queryEqual(toValue: "preparing")
+                                                        query_process.observe(DataEventType.value, with: { (snapshot) in
                                               
-                                              self.noProcessOrders.text = String(snapshot.childrenCount)
+                                              //if the reference have some values
+                                              if snapshot.childrenCount > 0 {
+                                                
+                                               
+                                                
                                             
-                                              let cartObject = newOrders.value as? [String: AnyObject]
-                                              let userId  = cartObject?["userId"]
-                                              let orderId  = cartObject?["orderId"]
-                                              let dataKey = cartObject?["key"]
+                                                
+                                               
+                                                  //clearing the list
+                                                  self.processingList.removeAll()
+                                                 
+                                                // self.animationView.alpha = 0
+                                                  //iterating through all the values
+                                                  for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
+                                                      //getting values
+                                                     
+                                                     self.noProcessOrders.text = String(snapshot.childrenCount)
+                                                   
+                                                     let cartObject = newOrders.value as? [String: AnyObject]
+                                                     let userId  = cartObject?["userId"]
+                                                     let orderId  = cartObject?["orderId"]
+                                                     let dataKey = cartObject?["key"]
 
-                                              
-                                             //creating artist object with model and fetched values
-                                              let food = ProcessingOrderModel(userId: userId as! String?, orderId: orderId as! String?,dataKey: dataKey as! String?)
-                                                                            
-                                              
-                                                                            //appending it to list
-                                                      self.processingList.append(food)
-                                      
+                                                     
+                                                    //creating artist object with model and fetched values
+                                                     let food = ProcessingOrderModel(userId: userId as! String?, orderId: orderId as! String?,dataKey: dataKey as! String?)
+                                                                                   
+                                                     
+                                                                                   //appending it to list
+                                                             self.processingList.append(food)
                                              
-                                           }
+                                                    
+                                                  }
+                                                  
+                                                  //reloading the tableview
+                                                  self.processingOrdersTableView.reloadData()
+                                              }
+                                            
+                                            
                                            
-                                           //reloading the tableview
-                                           self.processingOrdersTableView.reloadData()
-                                       }
-                                     
-                                     
-                                    
-                                     
-                                   })
+                                            
+                                          })
+               
+                        //observing the data changes
+                                                    let query = refGetOrderInfo.queryOrdered(byChild: "status").queryEqual(toValue: "pending")
+                                                                  query.observe(DataEventType.value, with: { (snapshot) in
+                                                        
+                                                        //if the reference have some values
+                                                        if snapshot.childrenCount > 0 {
+                                                          
+                                                         
+                                                          
+                                                      
+                                                          
+                                                         
+                                                            //clearing the list
+                                                            self.cartList.removeAll()
+                                                           
+                                                          // self.animationView.alpha = 0
+                                                            //iterating through all the values
+                                                            for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
+                                                                //getting values
+                                                               
+                                                               self.noOrders.text = String(snapshot.childrenCount)
+                                                             
+                                                               let cartObject = newOrders.value as? [String: AnyObject]
+                                                               let userId  = cartObject?["userId"]
+                                                               let orderId  = cartObject?["orderId"]
+                                                               let dataKey = cartObject?["key"]
+
+                                                               
+                                                              //creating artist object with model and fetched values
+                                                               let food = NewOrderModel(userId: userId as! String?, orderId: orderId as! String?, dataKey: dataKey as! String?)
+                                                                                             
+                                                               
+                                                                                             //appending it to list
+                                                                       self.cartList.append(food)
+                                                       
+                                                              
+                                                            }
+                                                            
+                                                            //reloading the tableview
+                                                            self.newOrdersTableView.reloadData()
+                                                        }
+                                                      
+                                                      
+                                                     
+                                                      
+                                                    })
+                        
         
+        
+       
         
         
         
@@ -424,7 +430,7 @@ extension AdminOrdersViewController: newOrderDelegate {
         cartList.remove(at: Index)
         self.newOrdersTableView.reloadData()
         
-        self.noOrders.text = String( cartList.count )
+        self.noOrders.text = String(cartList.count )
 
       
         
@@ -470,6 +476,7 @@ extension AdminOrdersViewController: newOrderDelegate {
         
     }
 }
+
 
 extension AdminOrdersViewController: processingOrderDelegate {
     func onStatusTapped(title: String, Index: Int) {
