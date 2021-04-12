@@ -13,9 +13,12 @@ import Lottie
 
 class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var startText: UITextField!
     @IBOutlet weak var endText: UITextField!
     let datePicker = UIDatePicker()
+    
+    var total = Int()
     
     @IBOutlet weak var cartTableView: UITableView!
     
@@ -67,6 +70,10 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
           
               cell.orderId.text = cart.orderId
            cell.amount.text = cart.amount
+            
+            self.total += Int(cell.amount.text ?? "0") ?? 0
+            
+            self.totalAmount.text = String("Rs. \(self.total)")
           
               
               
@@ -96,23 +103,107 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @objc func donePressed(){
-        datePicker.datePickerMode = UIDatePicker.Mode.date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let dateString = dateFormatter.string(from: datePicker.date)
-     
+           datePicker.datePickerMode = UIDatePicker.Mode.date
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "dd/MM/yyyy"
+           let dateString = dateFormatter.string(from: datePicker.date)
+           
+           let toDate =  dateFormatter.date(from:dateString )!
+           
+
         
-        startText.text = dateString
-        startLabel.text = dateString
-        
-        
-        self.view.endEditing(true)
-        
-       
-        
-        
-        
-    }
+          // let dateStringFix = dateFormatter.date(from: dateString)
+           
+
+
+        self.totalAmount.text = ""
+        self.total = 0
+           
+           startText.text = dateString
+           startLabel.text = dateString
+           
+           
+           self.view.endEditing(true)
+           
+           //getting a reference to the node artists
+                 refCarts = Database.database().reference().child("order history");
+                                 
+                                 //observing the data changes
+                                     // refCarts.observe(DataEventType.value, with: { (snapshot) in
+                                          
+                // query_process.observe(.value, with: { snapshot in
+                 let query_process = refCarts.queryOrdered(byChild: "date").queryEnding(atValue:"22/01/2021")
+                                   //           query_process.observe(DataEventType.value, with: { (snapshot) in
+                        
+                        query_process.observe(DataEventType.value, with: { snapshot in
+                     //query_process.ob
+                                         
+                                          //if the reference have some values
+                                          if snapshot.childrenCount > 0 {
+                                            
+                                           
+                                            
+                                        
+                                            
+                                           
+                                              //clearing the list
+                                              self.cartList.removeAll()
+                                             
+                                            // self.animationView.alpha = 0
+                                              //iterating through all the values
+                                        for carts in snapshot.children.allObjects as! [DataSnapshot] {
+                                                  //getting values
+                                                  let cartObject = carts.value as? [String: AnyObject]
+                                                 let orderId  = carts.key
+                                                  let amount  = cartObject?["amount"]
+                                                  let date = cartObject?["date"]
+                                                 
+                                               
+
+                                                let isoDate = date
+                                                let customDateStart = self.startText.text!
+                                              let customDateEnd = self.endText.text!
+                                            
+
+                                            let dateFormatter = DateFormatter()
+                                            dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+                                            dateFormatter.dateFormat = "dd-MM-yyyy"
+                                        let Newdate = dateFormatter.date(from:isoDate as! String)!
+                                                let CustomNewdateStart = dateFormatter.date(from:customDateStart)
+                                            let CustomNewdateEnd = dateFormatter.date(from:customDateEnd)
+                                                                                      
+                                                if(Newdate > CustomNewdateStart! && Newdate < CustomNewdateEnd!){
+                                                                                          
+                                                                                          //creating artist object with model and fetched values
+                                            let cart = AdminAccountModel(orderId: orderId as! String?, amount: amount as! String?,date: date as! String?)
+                                                                                             
+                                                                                          
+                                                                                             //appending it to list
+                                            self.cartList.append(cart)
+                                                                                          
+                                    self.cartTableView.reloadData()
+                                                                                          
+                                                                                      }
+                                                                                     //self.total +=
+                                                
+                                                
+                                              }
+                                              
+                                              //reloading the tableview
+                                              self.cartTableView.reloadData()
+                                          }
+                                        
+                                         
+                                        
+                                       
+                                        
+                                      })
+           
+          
+           
+           
+           
+       }
     
     func createDatePickerEnd(){
            
@@ -139,13 +230,89 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         let dateString = dateFormatter.string(from: datePicker.date)
+        
      
         
         endText.text = dateString
         
+         self.totalAmount.text = ""
+        self.total = 0
         
         self.view.endEditing(true)
         
+        //getting a reference to the node artists
+                        refCarts = Database.database().reference().child("order history");
+                                        
+                                        //observing the data changes
+                                            // refCarts.observe(DataEventType.value, with: { (snapshot) in
+                                                 
+                       // query_process.observe(.value, with: { snapshot in
+                        let query_process = refCarts.queryOrdered(byChild: "date").queryEnding(atValue:"22/01/2021")
+                                          //           query_process.observe(DataEventType.value, with: { (snapshot) in
+                               
+                               query_process.observe(DataEventType.value, with: { snapshot in
+                            //query_process.ob
+                                                
+                                                 //if the reference have some values
+                                                 if snapshot.childrenCount > 0 {
+                                                   
+                                                  
+                                                   
+                                               
+                                                   
+                                                  
+                                                     //clearing the list
+                                                     self.cartList.removeAll()
+                                                    
+                                                   // self.animationView.alpha = 0
+                                                     //iterating through all the values
+                                               for carts in snapshot.children.allObjects as! [DataSnapshot] {
+                                                         //getting values
+                                                         let cartObject = carts.value as? [String: AnyObject]
+                                                        let orderId  = carts.key
+                                                         let amount  = cartObject?["amount"]
+                                                         let date = cartObject?["date"]
+                                                        
+                                                      
+
+                                                       let isoDate = date
+                                                       let customDateStart = self.startText.text!
+                                                     let customDateEnd = self.endText.text!
+                                                   
+
+                                                   let dateFormatter = DateFormatter()
+                                                   dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+                                                   dateFormatter.dateFormat = "dd-MM-yyyy"
+                                               let Newdate = dateFormatter.date(from:isoDate as! String)!
+                                                       let CustomNewdateStart = dateFormatter.date(from:customDateStart)
+                                                   let CustomNewdateEnd = dateFormatter.date(from:customDateEnd)
+                                                                                             
+                                                       if(Newdate > CustomNewdateStart! && Newdate < CustomNewdateEnd!){
+                                                                                                 
+                                                                                                 //creating artist object with model and fetched values
+                                                   let cart = AdminAccountModel(orderId: orderId as! String?, amount: amount as! String?,date: date as! String?)
+                                                                                                    
+                                                                                                 
+                                                                                                    //appending it to list
+                                                   self.cartList.append(cart)
+                                                                                                 
+                                           self.cartTableView.reloadData()
+                                                                                                 
+                                                                                             }
+                                                                                            //self.total +=
+                                                       
+                                                       
+                                                     }
+                                                     
+                                                     //reloading the tableview
+                                                     self.cartTableView.reloadData()
+                                                 }
+                                               
+                                                
+                                               
+                                              
+                                               
+                                             })
        
         
         
@@ -164,8 +331,11 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
         formatter.dateFormat = "dd/MM/yyyy"
         let result = formatter.string(from: date)
         
+        
         self.startText.text = result
         self.endText.text = result
+        
+        let toDate = formatter.date(from:result)
         
         createDatePicker()
 
@@ -181,10 +351,10 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
                             // refCarts.observe(DataEventType.value, with: { (snapshot) in
                                  
        // query_process.observe(.value, with: { snapshot in
-        let query_process = refCarts.queryOrdered(byChild: "date").queryStarting(atValue:"02/01/2021").queryEnding(atValue:"20/03/2021")
+        let query_process = refCarts.queryOrdered(byChild: "date").queryEnding(atValue:"22/01/2021")
                    //           query_process.observe(DataEventType.value, with: { (snapshot) in
         
-        query_process.observe(.value, with: { snapshot in
+        query_process.observe(DataEventType.value, with: { snapshot in
             //query_process.ob
                                 
                                  //if the reference have some values
@@ -207,11 +377,16 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
                                          let amount  = cartObject?["amount"]
                                          let date = cartObject?["date"]
                                         
-                                       
-                                       //self.total += cartAmount as! Int
-                                     
-                                      
+                                        let isoDate = date
+                                        let customDate = "01/05/2021"
+
+                                        let dateFormatter = DateFormatter()
+                                        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+                                        dateFormatter.dateFormat = "dd-MM-yyyy"
+                                        let Newdate = dateFormatter.date(from:isoDate as! String)!
+                                        let CustomNewdate = dateFormatter.date(from:customDate)!
                                         
+                                        if(Newdate > CustomNewdate){
                                             
                                             //creating artist object with model and fetched values
                                             let cart = AdminAccountModel(orderId: orderId as! String?, amount: amount as! String?,date: date as! String?)
@@ -221,6 +396,13 @@ class AdminAcountViewController: UIViewController, UITableViewDelegate, UITableV
                                                self.cartList.append(cart)
                                             
                                              self.cartTableView.reloadData()
+                                            
+                                        }
+                                       //self.total += cartAmount as! Int
+                                     
+                                      
+                                        
+                                            
                                             
                                         
                                          

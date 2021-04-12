@@ -7,8 +7,7 @@
 //
 
 import XCTest
-@testable import Cafe__Nibm
-
+@testable import Café_Nibm
 class Cafe__NibmTests: XCTestCase {
 
     override func setUp() {
@@ -30,5 +29,7 @@ class Cafe__NibmTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
 
 }
