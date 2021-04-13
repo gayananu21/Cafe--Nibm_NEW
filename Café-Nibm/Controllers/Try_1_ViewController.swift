@@ -90,6 +90,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                                              VC1.fName = food.name ?? ""
                                              VC1.fDescription = food.description ?? ""
                                              VC1.fPrice = String(food.price!)
+                                VC1.foodKey = food.key ?? ""
                 
                 
                 

@@ -56,6 +56,7 @@
 		9B43BBDA25E36D950039D5E2 /* Cafe__NibmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBD925E36D950039D5E2 /* Cafe__NibmTests.swift */; };
 		9B43BBE525E36D950039D5E2 /* Cafe__NibmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */; };
 		9B44123325E6AC8C00A0445A /* Try_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */; };
+		9B460E4426245F2800A6D9C7 /* EditFoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B460E4326245F2800A6D9C7 /* EditFoodItemViewController.swift */; };
 		9B6F1DB526209E650008FCA4 /* AdminAcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */; };
 		9B6F1DB726209E8E0008FCA4 /* AdminAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DB626209E8E0008FCA4 /* AdminAccountTableViewCell.swift */; };
 		9B6F1DBB26209EE00008FCA4 /* AdminAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DBA26209EE00008FCA4 /* AdminAccountModel.swift */; };
@@ -178,6 +179,7 @@
 		9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe__NibmUITests.swift; sourceTree = "<group>"; };
 		9B43BBE625E36D950039D5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try_1_ViewController.swift; sourceTree = "<group>"; };
+		9B460E4326245F2800A6D9C7 /* EditFoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditFoodItemViewController.swift; path = ../EditFoodItemViewController.swift; sourceTree = "<group>"; };
 		9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminAcountViewController.swift; path = ../AdminAcountViewController.swift; sourceTree = "<group>"; };
 		9B6F1DB626209E8E0008FCA4 /* AdminAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminAccountTableViewCell.swift; path = ../../AdminAccountTableViewCell.swift; sourceTree = "<group>"; };
 		9B6F1DBA26209EE00008FCA4 /* AdminAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAccountModel.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				9B21A7DB261F290F0049FA9C /* AdminOrdersViewController.swift */,
 				9B21A7ED261FE42D0049FA9C /* OrderDetailsViewController.swift */,
 				9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */,
+				9B460E4326245F2800A6D9C7 /* EditFoodItemViewController.swift */,
 				9B0D42C625E4D2D200F06C91 /* Views */,
 			);
 			path = Controllers;
@@ -816,6 +819,7 @@
 				9B21A7F2261FE5120049FA9C /* OrderDetailModel.swift in Sources */,
 				9B0D42C525E4D13400F06C91 /* ResturantViewController.swift in Sources */,
 				9B75A46325E7F25A00F20165 /* OrderViewController.swift in Sources */,
+				9B460E4426245F2800A6D9C7 /* EditFoodItemViewController.swift in Sources */,
 				9B43BBC525E36D8E0039D5E2 /* SceneDelegate.swift in Sources */,
 				9BDB570625E4F2D4003DC9B1 /* SampleSliderViewController.swift in Sources */,
 				9B0D42C125E4D08600F06C91 /* Food.swift in Sources */,

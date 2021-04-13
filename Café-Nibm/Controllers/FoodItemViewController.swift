@@ -36,6 +36,7 @@ class FoodItemViewController: UIViewController {
     var fName = " "
     var fDescription = " "
     var fPrice = " "
+    var foodKey = ""
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var foodDescription: RoundLabel!
@@ -232,6 +233,31 @@ class FoodItemViewController: UIViewController {
         
     }
     @IBAction func onEditTap(_ sender: Any) {
+        
+        
+    }
+    @IBAction func onEditFoodItem(_ sender: Any) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                                                        let VC1 = storyBoard.instantiateViewController(withIdentifier: "EDIT_MENU_FOOD") as! EditFoodItemViewController
+                                   
+                                   
+        VC1.editFoodName = foodName.text ?? ""
+        VC1.editDescription = foodDescription.text ?? ""
+        VC1.editFoodPrice = foodPrice.text ?? ""
+        VC1.editFoodKey = foodKey
+        
+        
+                      
+                      
+                      
+                      
+                      
+
+                                                          
+                             
+                             self.navigationController?.pushViewController(VC1, animated: true)
+                      
         
         
     }

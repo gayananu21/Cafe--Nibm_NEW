@@ -19,7 +19,7 @@ class AddMenuFoodViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var eView: UIView!
        
 
-       let lottieView = AnimationView()
+    let lottieView = AnimationView()
     
     
     @IBOutlet weak var featuredImage: UIImageView!
@@ -32,6 +32,8 @@ class AddMenuFoodViewController: UIViewController, UIImagePickerControllerDelega
     
     var numberOfButtons = 0
     var buttonArray = [String]()
+    
+   
 
     @IBOutlet weak var checkboxButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!

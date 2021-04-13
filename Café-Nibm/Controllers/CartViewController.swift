@@ -85,7 +85,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
           fID = cart.cID!
         
         
-      
+       // var abv = self.user?.phoneNumber
 
        
         tableView.beginUpdates()

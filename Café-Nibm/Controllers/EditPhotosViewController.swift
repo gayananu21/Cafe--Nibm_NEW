@@ -43,7 +43,7 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
     
       var imageArray = [String]()
     
-    
+    var editFoodName = ""
     
     
     
@@ -231,14 +231,14 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                           
                   
                    
-                   storage.child("foodCollection/burger/image01.jpg").putData(imageData, metadata: nil, completion: {_, error in
+                   storage.child("foodCollection/\(editFoodName)/image01.jpg").putData(imageData, metadata: nil, completion: {_, error in
                        guard error == nil else {
                            print("Failed to upload")
                            return
                        }
                    })
                    
-                   storage.child("foodCollection/burger/image01.jpg").downloadURL(completion: {url, error in
+                   storage.child("foodCollection/\(editFoodName)/image01.jpg").downloadURL(completion: {url, error in
                        guard let url = url, error == nil else{
                         
                         let alert = UIAlertController(title: "Error", message: "Failed to uplod new image!", preferredStyle: UIAlertController.Style.alert)
@@ -256,7 +256,7 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                         let urlString = url.absoluteString
                       
                         let setImageRef = Database.database().reference()
-                        let onSetImageUrl = setImageRef.child("FoodCollection/Burger/Image_01/url")
+                    let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_01/url")
                         
                         onSetImageUrl.setValue(urlString)
                     
@@ -308,14 +308,14 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                                  
                          
                           
-                          storage.child("foodCollection/burger/image02.jpg").putData(imageData, metadata: nil, completion: {_, error in
+                          storage.child("foodCollection/\(self.editFoodName)/image02.jpg").putData(imageData, metadata: nil, completion: {_, error in
                               guard error == nil else {
                                   print("Failed to upload")
                                   return
                               }
                           })
                           
-                          storage.child("foodCollection/burger/image02.jpg").downloadURL(completion: {url, error in
+                          storage.child("foodCollection/\(self.editFoodName)/image02.jpg").downloadURL(completion: {url, error in
                               guard let url = url, error == nil else{
                             let alert = UIAlertController(title: "Error", message: "Failed to uplod new image!", preferredStyle: UIAlertController.Style.alert)
 
@@ -333,7 +333,7 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                             
 
                                 let setImageRef = Database.database().reference()
-                                let onSetImageUrl = setImageRef.child("FoodCollection/Burger/Image_02/url")
+                                let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_02/url")
                                 
                                 onSetImageUrl.setValue(urlString)
                             
@@ -376,14 +376,14 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                           
                   
                    
-                   storage.child("foodCollection/burger/image03.jpg").putData(imageData, metadata: nil, completion: {_, error in
+                   storage.child("foodCollection/\(self.editFoodName)/image03.jpg").putData(imageData, metadata: nil, completion: {_, error in
                        guard error == nil else {
                            print("Failed to upload")
                            return
                        }
                    })
                    
-                   storage.child("foodCollection/burger/image03.jpg").downloadURL(completion: {url, error in
+                   storage.child("foodCollection/\(self.editFoodName)/image03.jpg").downloadURL(completion: {url, error in
                        guard let url = url, error == nil else{
                             let alert = UIAlertController(title: "Error", message: "Failed to uplod new image!", preferredStyle: UIAlertController.Style.alert)
 
@@ -401,7 +401,7 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                     
                     
                         let setImageRef = Database.database().reference()
-                        let onSetImageUrl = setImageRef.child("FoodCollection/Burger/Image_03/url")
+                        let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_03/url")
                         
                         onSetImageUrl.setValue(urlString)
                     
@@ -443,14 +443,14 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                           
                   
                    
-                   storage.child("foodCollection/burger/image04.jpg").putData(imageData, metadata: nil, completion: {_, error in
+                   storage.child("foodCollection/\(self.editFoodName)/image04.jpg").putData(imageData, metadata: nil, completion: {_, error in
                        guard error == nil else {
                            print("Failed to upload")
                            return
                        }
                    })
                    
-                   storage.child("foodCollection/burger/image04.jpg").downloadURL(completion: {url, error in
+                   storage.child("foodCollection/\(self.editFoodName)/image04.jpg").downloadURL(completion: {url, error in
                        guard let url = url, error == nil else{
                             let alert = UIAlertController(title: "Error", message: "Failed to uplod new image!", preferredStyle: UIAlertController.Style.alert)
 
@@ -467,7 +467,7 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                                                 let urlString = url.absoluteString
                     
                         let setImageRef = Database.database().reference()
-                        let onSetImageUrl = setImageRef.child("FoodCollection/Burger/Image_04/url")
+                        let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_04/url")
                         
                         onSetImageUrl.setValue(urlString)
                     
@@ -507,14 +507,14 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                           
                   
                    
-                   storage.child("foodCollection/burger/image05.jpg").putData(imageData, metadata: nil, completion: {_, error in
+                   storage.child("foodCollection/\(self.editFoodName)/image05.jpg").putData(imageData, metadata: nil, completion: {_, error in
                        guard error == nil else {
                            print("Failed to upload")
                            return
                        }
                    })
                    
-                   storage.child("foodCollection/burger/image05.jpg").downloadURL(completion: {url, error in
+                   storage.child("foodCollection/\(self.editFoodName)/image05.jpg").downloadURL(completion: {url, error in
                        guard let url = url, error == nil else{
                            let alert = UIAlertController(title: "Error", message: "Failed to uplod new image!", preferredStyle: UIAlertController.Style.alert)
 
@@ -532,7 +532,7 @@ class EditPhotosViewController: UIViewController, UIImagePickerControllerDelegat
                     
                     
                         let setImageRef = Database.database().reference()
-                        let onSetImageUrl = setImageRef.child("FoodCollection/Burger/Image_05/url")
+                        let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_05/url")
                         
                         onSetImageUrl.setValue(urlString)
                     
