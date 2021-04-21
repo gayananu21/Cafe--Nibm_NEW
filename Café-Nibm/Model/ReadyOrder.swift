@@ -12,16 +12,22 @@ import  UIKit
 class ReadyOrderModel {
     
      var userId: String?
-          var orderId: String?
-          var dataKey: String?
-          
-         
-          
-          init(userId: String?, orderId: String?, dataKey: String?
-      ){
-              self.userId = userId
-              self.orderId = orderId
-              self.dataKey = dataKey
+              var orderId: String?
+              var dataKey: String?
+        var customerName: String?
+      var distance: String?
               
+             
+              
+        init(userId: String?, orderId: String?, dataKey: String?,  customerName: String?, distance: String?
+          ){
+                  self.userId = userId
+                  self.orderId = orderId
+                  self.dataKey = dataKey
+                  self.customerName =  customerName
+                  self.distance = distance
+          
+                
+                  
+              }
           }
-      }

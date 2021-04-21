@@ -10,11 +10,14 @@ import UIKit
 import Firebase
 import Kingfisher
 import FirebaseAuth
+import CoreData
 
 
 class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
   
+     var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     @IBOutlet weak var topView1_Width: NSLayoutConstraint!
     
     @IBOutlet weak var topView_1: UIView!
@@ -339,6 +342,13 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                 
                  
                })
+        
+        
+        
+       
+       
+        
+        
         
        
 

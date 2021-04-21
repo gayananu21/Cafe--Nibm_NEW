@@ -47,6 +47,11 @@
 		9B37184A25E67180003A3451 /* FoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37184925E67180003A3451 /* FoodBar.swift */; };
 		9B37184C25E672D0003A3451 /* FoodItemScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37184B25E672D0003A3451 /* FoodItemScrollTableViewCell.swift */; };
 		9B3D7E91261C0F2700CC97E3 /* SurveyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3D7E90261C0F2700CC97E3 /* SurveyButton.swift */; };
+		9B3FDB6D26302C5E00ABD480 /* Bell.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB6C26302C5D00ABD480 /* Bell.json */; };
+		9B3FDB6F26302FF000ABD480 /* Bell1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB6E26302FF000ABD480 /* Bell1.json */; };
+		9B3FDB7226303DE000ABD480 /* Shop Bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB7126303DE000ABD480 /* Shop Bell.mp3 */; };
+		9B3FDB742630620200ABD480 /* New Order.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB732630620100ABD480 /* New Order.mp3 */; };
+		9B3FDB7926306C7D00ABD480 /* Café-Nibm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FDB7726306C7D00ABD480 /* Café-Nibm.xcdatamodeld */; };
 		9B43BBC325E36D8E0039D5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */; };
 		9B43BBC525E36D8E0039D5E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */; };
 		9B43BBC725E36D8E0039D5E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC625E36D8E0039D5E2 /* ViewController.swift */; };
@@ -164,6 +169,11 @@
 		9B37184925E67180003A3451 /* FoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBar.swift; sourceTree = "<group>"; };
 		9B37184B25E672D0003A3451 /* FoodItemScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemScrollTableViewCell.swift; sourceTree = "<group>"; };
 		9B3D7E90261C0F2700CC97E3 /* SurveyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyButton.swift; sourceTree = "<group>"; };
+		9B3FDB6C26302C5D00ABD480 /* Bell.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bell.json; sourceTree = "<group>"; };
+		9B3FDB6E26302FF000ABD480 /* Bell1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bell1.json; sourceTree = "<group>"; };
+		9B3FDB7126303DE000ABD480 /* Shop Bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shop Bell.mp3"; sourceTree = "<group>"; };
+		9B3FDB732630620100ABD480 /* New Order.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "New Order.mp3"; sourceTree = "<group>"; };
+		9B3FDB7826306C7D00ABD480 /* Café-Nibm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Café-Nibm.xcdatamodel"; sourceTree = "<group>"; };
 		9B43BBBF25E36D8E0039D5E2 /* Café-Nibm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Café-Nibm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -312,6 +322,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		9B3FDB7026303DCD00ABD480 /* Mp3 Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9B3FDB7126303DE000ABD480 /* Shop Bell.mp3 */,
+				9B3FDB732630620100ABD480 /* New Order.mp3 */,
+			);
+			path = "Mp3 Assets";
+			sourceTree = "<group>";
+		};
 		9B43BBB625E36D8E0039D5E2 = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +356,8 @@
 		9B43BBC125E36D8E0039D5E2 /* Café-Nibm */ = {
 			isa = PBXGroup;
 			children = (
+				9B3FDB7726306C7D00ABD480 /* Café-Nibm.xcdatamodeld */,
+				9B3FDB7026303DCD00ABD480 /* Mp3 Assets */,
 				9BF5570B26090B780060092A /* Network */,
 				9B2BD56C25E36E00000A33BB /* Helpers */,
 				9BF97F40260F4E1000B9C1F4 /* fonts */,
@@ -416,6 +437,8 @@
 				9BF557082608EF550060092A /* Star.json */,
 				9BF97F4B260F4E2200B9C1F4 /* Log.json */,
 				9BF97F49260F4E2000B9C1F4 /* mob.json */,
+				9B3FDB6E26302FF000ABD480 /* Bell1.json */,
+				9B3FDB6C26302C5D00ABD480 /* Bell.json */,
 				9B368347261CD95D00457C84 /* Pen.json */,
 				9BF97F55260F683B00B9C1F4 /* emprtCart.json */,
 				9BF97F4C260F4E2400B9C1F4 /* Res.json */,
@@ -593,9 +616,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF97F4D260F4E2400B9C1F4 /* mob.json in Resources */,
+				9B3FDB742630620200ABD480 /* New Order.mp3 in Resources */,
 				9BF557072608D4C20060092A /* ProfileCover.json in Resources */,
 				9BF5570426089D160060092A /* Food.json in Resources */,
 				9B43BBCF25E36D940039D5E2 /* LaunchScreen.storyboard in Resources */,
+				9B3FDB7226303DE000ABD480 /* Shop Bell.mp3 in Resources */,
 				9BF97F4F260F4E2400B9C1F4 /* Log.json in Resources */,
 				9BF556FA26088BD30060092A /* 4762-food-carousel.json in Resources */,
 				9BFAC95125EBB31C00B87075 /* GoogleService-Info.plist in Resources */,
@@ -604,8 +629,10 @@
 				9BF5571126091BF00060092A /* No_Network.json in Resources */,
 				9BF557092608EF560060092A /* Star.json in Resources */,
 				9BF97F48260F4E1000B9C1F4 /* montserrat_bold.otf in Resources */,
+				9B3FDB6F26302FF000ABD480 /* Bell1.json in Resources */,
 				9B43BBCA25E36D8E0039D5E2 /* Main.storyboard in Resources */,
 				9B9ACB4A2611E440006998F8 /* Add_Photo_Instructions.xib in Resources */,
+				9B3FDB6D26302C5E00ABD480 /* Bell.json in Resources */,
 				9BF97F50260F4E2400B9C1F4 /* Res.json in Resources */,
 				9B368348261CD95D00457C84 /* Pen.json in Resources */,
 				9BF97F45260F4E1000B9C1F4 /* montserrat_light.otf in Resources */,
@@ -836,6 +863,7 @@
 				9B3D7E91261C0F2700CC97E3 /* SurveyButton.swift in Sources */,
 				9B37184C25E672D0003A3451 /* FoodItemScrollTableViewCell.swift in Sources */,
 				9B2BD57025E36E00000A33BB /* Utilities.swift in Sources */,
+				9B3FDB7926306C7D00ABD480 /* Café-Nibm.xcdatamodeld in Sources */,
 				9B2BD57225E37CCB000A33BB /* UHBCustomLabel.swift in Sources */,
 				9B368340261C489400457C84 /* AddCategoryViewController.swift in Sources */,
 				9B21A7E2261F38AD0049FA9C /* NewOrderTableViewCell.swift in Sources */,
@@ -1177,6 +1205,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B3FDB7726306C7D00ABD480 /* Café-Nibm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B3FDB7826306C7D00ABD480 /* Café-Nibm.xcdatamodel */,
+			);
+			currentVersion = 9B3FDB7826306C7D00ABD480 /* Café-Nibm.xcdatamodel */;
+			path = "Café-Nibm.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9B43BBB725E36D8E0039D5E2 /* Project object */;
 }

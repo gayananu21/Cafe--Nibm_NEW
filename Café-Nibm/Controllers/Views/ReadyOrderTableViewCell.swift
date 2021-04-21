@@ -15,6 +15,7 @@ class ReadyOrderTableViewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var orderId: UILabel!
     
+    @IBOutlet weak var eView: UIView!
     
     @IBOutlet weak var finishButton: GradientView!
     var delegateReady: ReadyOrderDelegate?
