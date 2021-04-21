@@ -170,6 +170,8 @@ class AddCategoryViewController: UIViewController, UITableViewDelegate, UITableV
 
         // Do any additional setup after loading the view.
         
+      
+        
         self.lottieView.alpha = 1
                                          self.lottieView.animation = Animation.named("Pen")
                                          //let lottieView = AnimationView(animation: loadingAnimation)
@@ -467,3 +469,4 @@ class AddCategoryViewController: UIViewController, UITableViewDelegate, UITableV
                 view.endEditing(true)
             }
 }
+

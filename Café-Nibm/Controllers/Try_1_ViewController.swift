@@ -397,14 +397,14 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                             for i in 0...self.numberOfButtons{
                                   
                                  
-                                if(self.numberOfButtons<7){
-                                    self.topView1_Width.constant = 700
+                                if(self.numberOfButtons<5){
+                                    self.topView1_Width.constant = 750
                                             
                                         }
                                         
                                         else{
                                             
-                                    self.topView1_Width.constant = CGFloat((self.numberOfButtons + 1) * 117)
+                                    self.topView1_Width.constant = CGFloat((self.numberOfButtons + 1) * 150)
                                         }
                                               
                                         
@@ -412,12 +412,17 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                                     let button = SurveyButton()
                                     
                                     if(i % 2 == 0){
-                                        button.backgroundColor = .red
+                                        button.firstColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                                         button.secondColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+                                        button.isHorizontal = false
+                                        
                                     }
                                     
                                     else{
                                         
-                                        button.backgroundColor = .green
+                                        button.firstColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                                        button.secondColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+                                         button.isHorizontal = false
                                     }
                                     
 

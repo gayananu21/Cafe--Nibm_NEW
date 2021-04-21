@@ -100,6 +100,10 @@ class AddMenuFoodViewController: UIViewController, UIImagePickerControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.foodName.addBottomBorderMenu()
+        self.foodPrice.addBottomBorderMenu()
+        self.foodDiscount.addBottomBorderMenu()
+        
         configureStackView()
         
         self.foodName.text = self.fName
@@ -476,4 +480,14 @@ class AddMenuFoodViewController: UIViewController, UIImagePickerControllerDelega
     }
     */
 
+}
+
+extension UITextField {
+    func addBottomBorderMenu(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: 1200, height: 1)
+        bottomLine.backgroundColor = #colorLiteral(red: 0.002138899435, green: 0.7532717322, blue: 0.003318697221, alpha: 1)
+        borderStyle = .none
+        layer.addSublayer(bottomLine)
+    }
 }

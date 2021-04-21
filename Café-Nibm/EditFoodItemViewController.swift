@@ -18,6 +18,13 @@ import Lottie
 class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
 
     
+    @IBOutlet weak var loadImage01: UIImageView!
+    @IBOutlet weak var loadImage02: UIImageView!
+    @IBOutlet weak var loadImage03: UIImageView!
+    @IBOutlet weak var loadImage04: UIImageView!
+    @IBOutlet weak var loadImage05: UIImageView!
+    
+    
     
     var editFoodName = ""
     var editFoodPrice = ""
@@ -26,8 +33,7 @@ class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelega
     var editDescription = ""
      var editFoodKey = ""
     
-    
-
+    var defaultUrl = URL(string: "https://firebasestorage.googleapis.com/v0/b/iosp-488c9.appspot.com/o/foodCollection%2FDefault%20Images%2Ficon-image-512.png?alt=media&token=82c7f8f9-69da-4230-bc05-b477996a6866")
    
         @IBOutlet weak var eView: UIView!
            
@@ -114,6 +120,10 @@ class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelega
             super.viewDidLoad()
             
             
+            self.foodName.addBottomBorderdit()
+            self.foodPrice.addBottomBorderdit()
+            self.foodDiscount.addBottomBorderdit()
+            
             let keyId = editFoodKey
             refEditFood = Database.database().reference().child("Foods/\(keyId ?? "")");
             
@@ -157,7 +167,273 @@ class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelega
                                                             self.lottieView.topAnchor.constraint(equalTo: self.eView.topAnchor),
                                                             self.lottieView.bottomAnchor.constraint(equalTo: self.eView.bottomAnchor)
                                                         ])
+            
+            
+            
+            storage.child("foodCollection/\(self.editFoodName)/image01.jpg").downloadURL(completion: {url, error in
+                                         let url = url
+                let urlString = url?.absoluteString
+                                     
+                                     
+                                         let setImageRef = Database.database().reference()
+                                         let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_01/url")
+                                         
+                                         onSetImageUrl.setValue(urlString)
+                                     
+                                   
+                
+                
+                
+               // let defaultUrlString = self.defaultUrl?.absoluteString
+                                                       
+                                       
+                
+                                        UserDefaults.standard.set(urlString, forKey: "url_01")
+                
+            DispatchQueue.main.async {
+                                           
+                let task = URLSession.shared.dataTask(with: url ?? self.defaultUrl! , completionHandler: { data, _, error in
+                                               guard let data = data, error == nil else{
+                                                   return
+                                               }
+                                              
+                                               DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                               
+                                                  
+                                                  self.loadImage01.image = UIImage(data: data)
+                                               }
+                                           })
+                                           task.resume()
+                
+            }
+                                    })
 
+            
+            storage.child("foodCollection/\(self.editFoodName)/image02.jpg").downloadURL(completion: {url, error in
+                                         let url = url
+                let urlString = url?.absoluteString
+                                     
+                                     
+                                         let setImageRef = Database.database().reference()
+                                         let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_02/url")
+                                         
+                                         onSetImageUrl.setValue(urlString)
+                                     
+                                                                 
+                                                       
+                                       
+                                        UserDefaults.standard.set(urlString, forKey: "url_02")
+                
+
+                DispatchQueue.main.async {
+                                               
+                    let task = URLSession.shared.dataTask(with: url ?? self.defaultUrl! , completionHandler: { data, _, error in
+                                                   guard let data = data, error == nil else{
+                                                       return
+                                                   }
+                                                  
+                                                   DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                   
+                                                      
+                                                      self.loadImage02.image = UIImage(data: data)
+                                                   }
+                                               })
+                                               task.resume()
+                    
+                }
+                                    })
+            
+            storage.child("foodCollection/\(self.editFoodName)/image03.jpg").downloadURL(completion: {url, error in
+                                         let url = url
+                let urlString = url?.absoluteString
+                                     
+                                     
+                                         let setImageRef = Database.database().reference()
+                                         let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_03/url")
+                                         
+                                         onSetImageUrl.setValue(urlString)
+                                     
+                                                                 
+                                                       
+                                       
+                                        UserDefaults.standard.set(urlString, forKey: "url_03")
+
+                DispatchQueue.main.async {
+                                               
+                    let task = URLSession.shared.dataTask(with: url ?? self.defaultUrl! , completionHandler: { data, _, error in
+                                                   guard let data = data, error == nil else{
+                                                       return
+                                                   }
+                                                  
+                                                   DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                   
+                                                      
+                                                      self.loadImage03.image = UIImage(data: data)
+                                                   }
+                                               })
+                                               task.resume()
+                    
+                }
+                                    })
+
+            
+            storage.child("foodCollection/\(self.editFoodName)/image04.jpg").downloadURL(completion: {url, error in
+                                         let url = url
+                let urlString = url?.absoluteString
+                                     
+                                     
+                                         let setImageRef = Database.database().reference()
+                                         let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_04/url")
+                                         
+                                         onSetImageUrl.setValue(urlString)
+                                     
+                                                                 
+                                                       
+                                       
+                                        UserDefaults.standard.set(urlString, forKey: "url_04")
+                
+
+                DispatchQueue.main.async {
+                                               
+                    let task = URLSession.shared.dataTask(with: url ?? self.defaultUrl! , completionHandler: { data, _, error in
+                                                   guard let data = data, error == nil else{
+                                                       return
+                                                   }
+                                                  
+                                                   DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                   
+                                                      
+                                                      self.loadImage04.image = UIImage(data: data)
+                                                   }
+                                               })
+                                               task.resume()
+                    
+                }
+                                    })
+            
+            storage.child("foodCollection/\(self.editFoodName)/image05.jpg").downloadURL(completion: {url, error in
+                                         let url = url
+                let urlString = url?.absoluteString
+                                     
+                                     
+                                         let setImageRef = Database.database().reference()
+                                         let onSetImageUrl = setImageRef.child("FoodCollection/\(self.editFoodName)/Image_05/url")
+                                         
+                                         onSetImageUrl.setValue(urlString)
+                                     
+                                                                 
+                                                       
+                                       
+                                        UserDefaults.standard.set(urlString, forKey: "url_05")
+                
+
+                DispatchQueue.main.async {
+                                               
+                    let task = URLSession.shared.dataTask(with: url ?? self.defaultUrl! , completionHandler: { data, _, error in
+                                                   guard let data = data, error == nil else{
+                                                       return
+                                                   }
+                                                  
+                                                   DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                   
+                                                      
+                                                      self.loadImage05.image = UIImage(data: data)
+                                                   }
+                                               })
+                                               task.resume()
+                    
+                }
+                                    })
+            
+            
+            guard let urlString = UserDefaults.standard.value(forKey: "url") as? String,
+                                        let url = URL(string: urlString)   else {
+                                           
+                                          
+                                           return
+                                       }
+                            
+                            let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+                                guard let data = data, error == nil else{
+                                    return
+                                }
+                               
+                                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                
+                                   
+                                   self.loadImage01.image = UIImage(data: data)
+                                }
+                            })
+                            task.resume()
+                       
+                       
+                       guard let urlString_02 = UserDefaults.standard.value(forKey: "url_02") as? String,
+                                               let url_02 = URL(string: urlString_02)   else {
+                                                  return
+                                              }
+                                   
+                                   let task_02 = URLSession.shared.dataTask(with: url_02, completionHandler: { data, _, error in
+                                       guard let data = data, error == nil else{
+                                           return
+                                       }
+                                      
+                                       DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                      self.loadImage02.image = UIImage(data: data)                                       }
+                                   })
+                                   task_02.resume()
+                       
+                       
+                       guard let urlString_03 = UserDefaults.standard.value(forKey: "url_03") as? String,
+                                                         let url_03 = URL(string: urlString_03)   else {
+                                                            return
+                                                        }
+                                             
+                                             let task_03 = URLSession.shared.dataTask(with: url_03, completionHandler: { data, _, error in
+                                                 guard let data = data, error == nil else{
+                                                     return
+                                                 }
+                                                
+                                                 DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                       self.loadImage03.image = UIImage(data: data)
+                                                 }
+                                             })
+                                             task_03.resume()
+                       
+                       guard let urlString_04 = UserDefaults.standard.value(forKey: "url_04") as? String,
+                                                         let url_04 = URL(string: urlString_04)   else {
+                                                            return
+                                                        }
+                                             
+                                             let task_04 = URLSession.shared.dataTask(with: url_04, completionHandler: { data, _, error in
+                                                 guard let data = data, error == nil else{
+                                                     return
+                                                 }
+                                                
+                                                 DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                       self.loadImage04.image = UIImage(data: data)
+                                                 }
+                                             })
+                                             task_04.resume()
+                       
+                       
+                       guard let urlString_05 = UserDefaults.standard.value(forKey: "url_05") as? String,
+                                                         let url_05 = URL(string: urlString_05)   else {
+                                                            return
+                                                        }
+                                             
+                                             let task_05 = URLSession.shared.dataTask(with: url_05, completionHandler: { data, _, error in
+                                                 guard let data = data, error == nil else{
+                                                     return
+                                                 }
+                                                
+                                                 DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                                      self.loadImage05.image = UIImage(data: data)
+                                                 }
+                                             })
+                                             task_05.resume()
+            
+            
+            
             
         }
         
@@ -406,9 +682,32 @@ class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelega
                picker.dismiss(animated: true, completion: nil)
            }
         
+    @IBAction func onBackTapped(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Are you sure", message: "Are you sure you want to go back before finishing edit food item", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Home", style: UIAlertAction.Style.destructive, handler: { action in
+                             
+                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let vc = storyboard.instantiateViewController(withIdentifier: "HOME_TAB")
+                                     vc.modalPresentationStyle = .fullScreen
+                                    vc.modalTransitionStyle = .crossDissolve
+                                    self.present(vc, animated: true)
+                             
+                            }))
+        alert.addAction(UIAlertAction(title: "Cancel ", style: .default, handler: { action in
+
+         
+
+        }))
+                            self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
         override func viewWillAppear(_ animated: Bool) {
                       super.viewWillAppear(animated)
-                      navigationController?.setNavigationBarHidden(true, animated: animated)
+                      navigationController?.setNavigationBarHidden(false, animated: animated)
                       
                       
                   }
@@ -498,14 +797,18 @@ class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelega
             
         }
         
-        /*
-        // MARK: - Navigation
-
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-        }
-        */
-
+      
     }
+
+extension UITextField {
+    func addBottomBorderdit(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: 1200, height: 1)
+        bottomLine.backgroundColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        borderStyle = .none
+        
+        layer.addSublayer(bottomLine)
+    }
+}
+
+

@@ -293,7 +293,7 @@ class FoodItemViewController: UIViewController {
                 //getting a reference to the node artists
                       
                        //getting a reference to the node artists
-                refCollection = Database.database().reference().child("FoodCollection").child("Burger");
+                refCollection = Database.database().reference().child("FoodCollection").child("\(self.fName)");
                                 
                                 //observing the data changes
                                      refCollection.observe(DataEventType.value, with: { (snapshot) in
