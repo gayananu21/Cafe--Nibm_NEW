@@ -156,7 +156,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
               //getting the artist of selected position
               food = foodList[indexPath.row]
              
-             if (food.availability == "on"){
+             if (food.availability == "off"){
                 
                
                 cell.foodStatusImage.image = UIImage(named:"xMark")
@@ -179,7 +179,7 @@ class Try_1_ViewController: UIViewController , UITableViewDelegate , UITableView
                 cell.foodSwitch.setOn(true, animated: true)
              }
              
-             if (food.availability == "off"){
+             if (food.availability == "on"){
                 
                 
                 cell.foodUnView.alpha = 0
@@ -919,7 +919,7 @@ extension Try_1_ViewController: FoodStatusDelegate {
             let ref = Database.database().reference()
                                  // let userRef = ref.child("addCart/PbvgpIOEccP1DQnwCUz2Iy3wJRm1/-MXSRJGwo57AYd3p5ErH")
             let userRef = ref.child("Foods/\(food.key ?? "")")
-                                  userRef.updateChildValues(["availability": String("on")])
+                                  userRef.updateChildValues(["availability": String("off")])
   
         
         
@@ -948,7 +948,7 @@ extension Try_1_ViewController: FoodStatusDelegate {
             let ref = Database.database().reference()
                                  // let userRef = ref.child("addCart/PbvgpIOEccP1DQnwCUz2Iy3wJRm1/-MXSRJGwo57AYd3p5ErH")
             let userRef = ref.child("Foods/\(food.key ?? "")")
-                                  userRef.updateChildValues(["availability": String("off")])
+                                  userRef.updateChildValues(["availability": String("on")])
                                   
                                  
                   

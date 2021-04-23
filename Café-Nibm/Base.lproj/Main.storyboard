@@ -38,7 +38,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWa-RU-guj">
                                                         <rect key="frame" x="0.0" y="148.5" width="374" height="54.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApU-bI-Akm" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
@@ -289,7 +289,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBq-g8-hKG">
                                                         <rect key="frame" x="0.0" y="416" width="374" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-HR-uF0" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
@@ -447,7 +447,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="RHa-IL-Le0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvZ-ms-tBn" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
@@ -639,7 +639,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="Khq-eB-gac" secondAttribute="bottom" id="N4e-2l-xL2"/>
                                                                 <constraint firstItem="Khq-eB-gac" firstAttribute="top" secondItem="LVZ-er-Vil" secondAttribute="top" id="lIR-Uz-A8b"/>
@@ -753,7 +753,7 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <color key="shadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="shadowColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                             </subviews>
@@ -1091,7 +1091,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30% OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8j-oC-hrL" customClass="RoundLabel" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                         <rect key="frame" x="40" y="0.0" width="92.5" height="45"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="JaO-ID-s2X"/>
                                                                         </constraints>
@@ -1107,7 +1107,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
@@ -1465,7 +1465,7 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1490,7 +1490,7 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1515,7 +1515,7 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1540,7 +1540,7 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1661,7 +1661,7 @@
                                                     <constraint firstAttribute="height" constant="49" id="J5r-9z-ifP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NzO-PE-Whf">
@@ -2227,7 +2227,7 @@
                                         <rect key="frame" x="276" y="0.0" width="138" height="50"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.34685359589999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Menu +">
-                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -2877,7 +2877,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-rp-zuf" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -2914,7 +2914,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-8c-ai7" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -2951,7 +2951,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSw-eM-rS8" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -2988,7 +2988,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grL-pw-Ymb" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -3025,7 +3025,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeI-xC-7DC" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -3513,7 +3513,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
@@ -3523,7 +3523,7 @@
                                                                         <constraint firstAttribute="width" constant="49" id="Vy6-st-cic"/>
                                                                         <constraint firstAttribute="height" constant="31" id="a6D-6K-bJY"/>
                                                                     </constraints>
-                                                                    <color key="onTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="onTintColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <connections>
                                                                         <action selector="onCheckAvailability:" destination="DWY-5X-9vW" eventType="valueChanged" id="ULG-QM-zEc"/>
@@ -3568,7 +3568,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="0xt-xf-X5T"/>
                                                         <constraint firstItem="Rxr-pN-xJ8" firstAttribute="leading" secondItem="ACh-t2-bsa" secondAttribute="leading" constant="1" id="9fd-47-eNY"/>
@@ -3662,7 +3662,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="138" height="50"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.34685359589041098" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Preview">
-                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
@@ -4180,7 +4180,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFu-fx-to6" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                 <rect key="frame" x="122" y="811" width="170" height="42"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <state key="normal" title="CANCEL ORDER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4191,10 +4191,10 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -4325,7 +4325,7 @@
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO2-lE-Q7M">
                                                                             <rect key="frame" x="0.0" y="0.0" width="77.5" height="80"/>
-                                                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                                             <state key="normal" title="Reject">
                                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4336,7 +4336,7 @@
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mi-qv-7ah">
                                                                             <rect key="frame" x="92.5" y="0.0" width="77.5" height="80"/>
-                                                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                                             <state key="normal" title="Accept">
                                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4420,7 +4420,38 @@
                                                     <constraint firstAttribute="height" constant="50" id="wgU-D3-K5t"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-je-jS5">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsS-hH-rOb">
+                                                <rect key="frame" x="0.0" y="428" width="414" height="328"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO READY ORDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMm-Z8-3dm">
+                                                        <rect key="frame" x="30" y="70" width="354" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="WWd-Up-UOs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDB-i9-qPb">
+                                                        <rect key="frame" x="157" y="145" width="100" height="100"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="lmi-MZ-0pV"/>
+                                                            <constraint firstAttribute="height" constant="100" id="yo0-2p-ZM5"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="SDB-i9-qPb" firstAttribute="top" secondItem="fMm-Z8-3dm" secondAttribute="bottom" constant="35" id="ZB3-2T-Prp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fMm-Z8-3dm" secondAttribute="trailing" constant="30" id="d0O-Pc-Xor"/>
+                                                    <constraint firstAttribute="height" constant="328" id="d2F-l9-5En"/>
+                                                    <constraint firstItem="fMm-Z8-3dm" firstAttribute="top" secondItem="AsS-hH-rOb" secondAttribute="top" constant="70" id="my6-AK-oKP"/>
+                                                    <constraint firstItem="SDB-i9-qPb" firstAttribute="centerX" secondItem="AsS-hH-rOb" secondAttribute="centerX" id="n70-su-Utt"/>
+                                                    <constraint firstItem="fMm-Z8-3dm" firstAttribute="leading" secondItem="AsS-hH-rOb" secondAttribute="leading" constant="30" id="pye-B7-ywR"/>
+                                                </constraints>
+                                            </view>
+                                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-je-jS5">
                                                 <rect key="frame" x="0.0" y="428" width="414" height="328"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -4639,16 +4670,17 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Pa-D8-QLs">
-                                                                    <rect key="frame" x="284" y="56" width="120" height="40"/>
+                                                                    <rect key="frame" x="284" y="36" width="120" height="80"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYQ-Zn-wru" customClass="GradientView" customModule="Cafe__Nibm" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
-                                                                            <color key="backgroundColor" red="0.20392156859999999" green="0.19215686269999999" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <rect key="frame" x="20" y="0.0" width="80" height="80"/>
+                                                                            <color key="backgroundColor" red="0.37585263324873097" green="0.1401595079863843" blue="0.34983933069071738" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="40" id="wk4-9N-03B"/>
+                                                                                <constraint firstAttribute="width" constant="80" id="tFq-nT-tFP"/>
+                                                                                <constraint firstAttribute="height" constant="80" id="wk4-9N-03B"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                                            <state key="normal" title="Update status">
+                                                                            <state key="normal" title="Preparing">
                                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </state>
                                                                             <userDefinedRuntimeAttributes>
@@ -4660,29 +4692,12 @@
                                                                                 <action selector="handleSelection:" destination="4pc-ms-9y1" eventType="touchUpInside" id="dgg-9e-7po"/>
                                                                             </connections>
                                                                         </button>
-                                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3c-Zg-uqa" customClass="GradientView" customModule="Cafe__Nibm" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
-                                                                            <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="40" id="cr4-Dm-MGP"/>
-                                                                            </constraints>
-                                                                            <state key="normal" title="Preparing">
-                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            </state>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                    <real key="value" value="15"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                            <connections>
-                                                                                <action selector="cityTapped:" destination="4pc-ms-9y1" eventType="touchUpInside" id="8jj-Xi-qbW"/>
-                                                                            </connections>
-                                                                        </button>
                                                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKz-lg-EC4" customClass="GradientView" customModule="Cafe__Nibm" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
-                                                                            <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <rect key="frame" x="20" y="0.0" width="80" height="80"/>
+                                                                            <color key="backgroundColor" red="0.023341871889842249" green="0.27006662436548223" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="40" id="3eN-xY-spR"/>
+                                                                                <constraint firstAttribute="width" constant="80" id="3Ti-at-C7e"/>
+                                                                                <constraint firstAttribute="height" constant="80" id="3eN-xY-spR"/>
                                                                             </constraints>
                                                                             <state key="normal" title="Ready">
                                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4698,12 +4713,10 @@
                                                                         </button>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="trailing" secondItem="GYQ-Zn-wru" secondAttribute="trailing" id="0Ep-tw-q1s"/>
-                                                                        <constraint firstItem="IKz-lg-EC4" firstAttribute="leading" secondItem="9Pa-D8-QLs" secondAttribute="leading" id="7Kc-5D-1sN"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="IKz-lg-EC4" secondAttribute="trailing" id="NhN-oC-Mub"/>
-                                                                        <constraint firstItem="GYQ-Zn-wru" firstAttribute="leading" secondItem="9Pa-D8-QLs" secondAttribute="leading" id="bJC-CU-Lui"/>
-                                                                        <constraint firstItem="S3c-Zg-uqa" firstAttribute="leading" secondItem="9Pa-D8-QLs" secondAttribute="leading" id="jod-id-i7y"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="S3c-Zg-uqa" secondAttribute="trailing" id="z1A-tM-HeL"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="GYQ-Zn-wru" secondAttribute="trailing" constant="20" id="NfL-Hl-dY7"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="IKz-lg-EC4" secondAttribute="trailing" constant="20" id="aEP-KB-QQc"/>
+                                                                        <constraint firstItem="GYQ-Zn-wru" firstAttribute="leading" secondItem="9Pa-D8-QLs" secondAttribute="leading" constant="20" id="d2u-xz-Ags"/>
+                                                                        <constraint firstItem="IKz-lg-EC4" firstAttribute="leading" secondItem="9Pa-D8-QLs" secondAttribute="leading" constant="20" id="zLa-Tj-FB9"/>
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
@@ -4720,10 +4733,10 @@
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="orderId" destination="tbb-ie-qdZ" id="S2e-79-z2U"/>
+                                                            <outlet property="readyButton" destination="IKz-lg-EC4" id="xkB-WU-3EP"/>
                                                             <outlet property="selectedButton" destination="GYQ-Zn-wru" id="5F5-Tc-RS4"/>
                                                             <outlet property="userImage" destination="Yeh-L8-9ZR" id="0bX-3p-bfX"/>
                                                             <outlet property="userName" destination="fQU-NH-2Tv" id="xWr-hr-OVv"/>
-                                                            <outletCollection property="cityButtons" destination="S3c-Zg-uqa" collectionClass="NSMutableArray" id="jpN-ev-YzP"/>
                                                             <outletCollection property="cityButtons" destination="IKz-lg-EC4" collectionClass="NSMutableArray" id="JLS-lE-cEr"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -4739,6 +4752,7 @@
                                         <constraints>
                                             <constraint firstItem="XG3-aU-Tcd" firstAttribute="top" secondItem="st5-a9-Bs5" secondAttribute="bottom" id="3YD-7h-HZa"/>
                                             <constraint firstItem="ANJ-Me-2XH" firstAttribute="leading" secondItem="W3U-7m-k6C" secondAttribute="leading" id="7b4-wR-Kbj"/>
+                                            <constraint firstItem="AsS-hH-rOb" firstAttribute="top" secondItem="XG3-aU-Tcd" secondAttribute="bottom" id="9s1-xW-Ll7"/>
                                             <constraint firstAttribute="trailing" secondItem="axF-Dc-9QV" secondAttribute="trailing" id="AoZ-7I-HMG"/>
                                             <constraint firstAttribute="trailing" secondItem="st5-a9-Bs5" secondAttribute="trailing" id="Etb-Sb-GPB"/>
                                             <constraint firstAttribute="trailing" secondItem="8s2-je-jS5" secondAttribute="trailing" id="J5A-Rc-ckn"/>
@@ -4748,6 +4762,7 @@
                                             <constraint firstAttribute="trailing" secondItem="ANJ-Me-2XH" secondAttribute="trailing" id="age-9t-WqN"/>
                                             <constraint firstItem="st5-a9-Bs5" firstAttribute="leading" secondItem="W3U-7m-k6C" secondAttribute="leading" id="b3i-cc-5ay"/>
                                             <constraint firstItem="axF-Dc-9QV" firstAttribute="top" secondItem="W3U-7m-k6C" secondAttribute="top" id="bZ4-Ci-pEd"/>
+                                            <constraint firstAttribute="trailing" secondItem="AsS-hH-rOb" secondAttribute="trailing" id="dBc-3Y-gG8"/>
                                             <constraint firstAttribute="height" constant="1200" id="daH-Qw-3CA"/>
                                             <constraint firstItem="LpV-dc-shH" firstAttribute="leading" secondItem="W3U-7m-k6C" secondAttribute="leading" id="enV-K9-aaY"/>
                                             <constraint firstItem="ANJ-Me-2XH" firstAttribute="top" secondItem="LpV-dc-shH" secondAttribute="bottom" id="gCq-Xw-fRA"/>
@@ -4756,6 +4771,7 @@
                                             <constraint firstAttribute="trailing" secondItem="LpV-dc-shH" secondAttribute="trailing" id="uqn-tr-V1p"/>
                                             <constraint firstItem="LpV-dc-shH" firstAttribute="top" secondItem="8s2-je-jS5" secondAttribute="bottom" id="vag-7g-whb"/>
                                             <constraint firstAttribute="trailing" secondItem="XG3-aU-Tcd" secondAttribute="trailing" id="wZk-4c-3hi"/>
+                                            <constraint firstItem="AsS-hH-rOb" firstAttribute="leading" secondItem="W3U-7m-k6C" secondAttribute="leading" id="x2A-l2-MPx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4779,6 +4795,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ss5-Nm-31y"/>
                     <connections>
+                        <outlet property="eViewReady" destination="SDB-i9-qPb" id="vUG-AE-vmw"/>
+                        <outlet property="emptyReadyOrders" destination="AsS-hH-rOb" id="sN8-Ju-1YB"/>
                         <outlet property="newOrdersTableView" destination="st5-a9-Bs5" id="J1S-N9-Q4Y"/>
                         <outlet property="noOrders" destination="wVP-vl-5oQ" id="Srv-l7-b09"/>
                         <outlet property="noProcessOrders" destination="cFQ-3s-FoO" id="xOc-d4-gBn"/>
@@ -5255,6 +5273,8 @@
                     </view>
                     <connections>
                         <outlet property="cartTableView" destination="uQS-0W-Ora" id="p5S-co-uF9"/>
+                        <outlet property="customerName" destination="oOf-4h-SQT" id="wqo-3E-EgH"/>
+                        <outlet property="customerStatus" destination="rBm-Sf-L0B" id="ZOq-Gf-VpS"/>
                         <outlet property="orderIdLabel" destination="I1t-ov-lh5" id="hzK-qY-NdD"/>
                     </connections>
                 </viewController>
@@ -5349,7 +5369,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="DONE">
-                                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
                                                         <connections>
@@ -5459,7 +5479,7 @@
                                                         <rect key="frame" x="119" y="4" width="177" height="115"/>
                                                         <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
                                                         <state key="normal" title="SIGN OUT">
-                                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -6555,7 +6575,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your cart is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-uz-Cwg">
                                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="31.5"/>
                                                                         <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add something to make me happy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szd-fJ-Cxb">
@@ -7258,7 +7278,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFN-dr-nio" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -7295,7 +7315,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBe-cS-Htq" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -7332,7 +7352,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIC-2v-8ct" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -7369,7 +7389,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ks-l3-siU" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -7406,7 +7426,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fe-3T-DGy" customClass="RoundButton" customModule="Cafe__Nibm" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
-                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" image="plus" catalog="system">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>

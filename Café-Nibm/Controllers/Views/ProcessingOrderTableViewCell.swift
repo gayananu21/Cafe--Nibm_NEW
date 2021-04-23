@@ -24,7 +24,8 @@ class ProcessingOrderTableViewCell: UITableViewCell {
           
           @IBOutlet weak var selectedButton: UIButton!
           
-          
+    @IBOutlet weak var readyButton: GradientView!
+    
           @IBAction func handleSelection(_ sender: UIButton) {
               cityButtons.forEach { (button) in
                   UIView.animate(withDuration: 0.5, animations: {
@@ -43,16 +44,7 @@ class ProcessingOrderTableViewCell: UITableViewCell {
              
               delegate?.onStatusTapped(title: sender.currentTitle ?? "", Index: Index!.row)
             
-            if(sender.currentTitle != "Ready"){
-                
-                self.selectedButton.setTitle(sender.currentTitle, for: .normal)
-                
-            }
-            
-            if(sender.currentTitle != "Preparing"){
-                          
-                          self.selectedButton.setTitle(sender.currentTitle, for: .normal)
-                      }
+          
             
             
              // self.selectedButton.setTitle(sender.currentTitle, for: .normal)
@@ -81,6 +73,20 @@ class ProcessingOrderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
         
+        selectedButton.layer.borderWidth = 0.5
+        selectedButton.layer.masksToBounds = false
+        selectedButton.layer.borderColor = UIColor.black.cgColor
+        selectedButton.layer.cornerRadius = selectedButton.frame.height/2
+        selectedButton.clipsToBounds = true
+        selectedButton.alpha = 1
+        
+        
+        readyButton.layer.borderWidth = 0.5
+               readyButton.layer.masksToBounds = false
+        readyButton.layer.borderColor = UIColor.black.cgColor
+               readyButton.layer.cornerRadius = readyButton.frame.height/2
+               readyButton.clipsToBounds = true
+               readyButton.alpha = 1
         
     }
 

@@ -252,6 +252,8 @@ class LoginScreenViewController: UIViewController, UIScrollViewDelegate, CLLocat
                 print("User signs in successfully")
                 let userInfo = Auth.auth().currentUser
                 let email = userInfo?.email
+                let name = userInfo?.displayName
+                let phoneNumber = userInfo?.phoneNumber
                 
                 // Normally, username and password would come from the user interface.
                        let credentials = Credentials(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "")

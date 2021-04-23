@@ -174,7 +174,7 @@ class AddMenuFoodViewController: UIViewController, UIImagePickerControllerDelega
                //getting a reference to the node artists
                       refFoodMenus = Database.database().reference().child("FoodCategories");
                
-               
+              
                         
                         //observing the data changes
                              refFoodMenus.observe(DataEventType.value, with: { (snapshot) in

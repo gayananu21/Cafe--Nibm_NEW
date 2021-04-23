@@ -52,6 +52,7 @@
 		9B3FDB7226303DE000ABD480 /* Shop Bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB7126303DE000ABD480 /* Shop Bell.mp3 */; };
 		9B3FDB742630620200ABD480 /* New Order.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB732630620100ABD480 /* New Order.mp3 */; };
 		9B3FDB7926306C7D00ABD480 /* Café-Nibm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FDB7726306C7D00ABD480 /* Café-Nibm.xcdatamodeld */; };
+		9B3FDB7D2630AF6B00ABD480 /* No Ready.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDB7C2630AF6900ABD480 /* No Ready.json */; };
 		9B43BBC325E36D8E0039D5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */; };
 		9B43BBC525E36D8E0039D5E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */; };
 		9B43BBC725E36D8E0039D5E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBC625E36D8E0039D5E2 /* ViewController.swift */; };
@@ -174,6 +175,7 @@
 		9B3FDB7126303DE000ABD480 /* Shop Bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shop Bell.mp3"; sourceTree = "<group>"; };
 		9B3FDB732630620100ABD480 /* New Order.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "New Order.mp3"; sourceTree = "<group>"; };
 		9B3FDB7826306C7D00ABD480 /* Café-Nibm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Café-Nibm.xcdatamodel"; sourceTree = "<group>"; };
+		9B3FDB7C2630AF6900ABD480 /* No Ready.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "No Ready.json"; sourceTree = "<group>"; };
 		9B43BBBF25E36D8E0039D5E2 /* Café-Nibm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Café-Nibm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B43BBC225E36D8E0039D5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B43BBC425E36D8E0039D5E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				9BF557082608EF550060092A /* Star.json */,
+				9B3FDB7C2630AF6900ABD480 /* No Ready.json */,
 				9BF97F4B260F4E2200B9C1F4 /* Log.json */,
 				9BF97F49260F4E2000B9C1F4 /* mob.json */,
 				9B3FDB6E26302FF000ABD480 /* Bell1.json */,
@@ -622,6 +625,7 @@
 				9B43BBCF25E36D940039D5E2 /* LaunchScreen.storyboard in Resources */,
 				9B3FDB7226303DE000ABD480 /* Shop Bell.mp3 in Resources */,
 				9BF97F4F260F4E2400B9C1F4 /* Log.json in Resources */,
+				9B3FDB7D2630AF6B00ABD480 /* No Ready.json in Resources */,
 				9BF556FA26088BD30060092A /* 4762-food-carousel.json in Resources */,
 				9BFAC95125EBB31C00B87075 /* GoogleService-Info.plist in Resources */,
 				9BF97F56260F683B00B9C1F4 /* emprtCart.json in Resources */,
@@ -1051,7 +1055,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--Nibm-12";
+				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--Nibm-12-00";
 				PRODUCT_NAME = "Café-Nibm";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1070,7 +1074,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--Nibm-12";
+				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--Nibm-12-00";
 				PRODUCT_NAME = "Café-Nibm";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

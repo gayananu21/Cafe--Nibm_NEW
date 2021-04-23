@@ -13,12 +13,15 @@ import Lottie
 import CoreLocation
 import AVFoundation
 import CoreData
+import Kingfisher
 
 
 class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITableViewDataSource, AVAudioPlayerDelegate  {
   
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
     
+    @IBOutlet weak var eViewReady: UIView!
+    @IBOutlet weak var emptyReadyOrders: UIView!
     @IBOutlet weak var noReadyOrders: UILabel!
     @IBOutlet weak var noProcessOrders: UILabel!
     
@@ -28,12 +31,15 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
     @IBOutlet weak var readyOrdersTableView: UITableView!
     @IBOutlet weak var newOrdersTableView: UITableView!
     
+    
     var customerDistance = Int()
   
      let lottieView = AnimationView()
     
     
      var audioPlayer = AVAudioPlayer()
+    
+    var customerName = ""
 
     
     var cartList = [NewOrderModel]()
@@ -46,7 +52,12 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
     var refGetProcessingOrders: DatabaseReference!
     var refGetReadyOrders: DatabaseReference!
      var refGetOrderInfo: DatabaseReference!
+      var refGetName: DatabaseReference!
+     var refGetUserImage: DatabaseReference!
+    
+    var ref : DatabaseReference!
     let user = Auth.auth().currentUser
+    
     
     
     var fID = ""
@@ -85,6 +96,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                     
                     VC1.orderId = cart.orderId ?? ""
                     VC1.userId = cart.userId ?? ""
+                    VC1.status = "ready"
                     
 
                     self.navigationController?.pushViewController(VC1, animated: true)
@@ -93,8 +105,81 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                           
                          
                       }
+            
+            case processingOrdersTableView:
+            
+            if(indexPath.row == indexPath.row){
+                            
+                              let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                              let VC1 = storyBoard.instantiateViewController(withIdentifier: "ORDER_DETAIL") as! OrderDetailsViewController
+                                           // the artist object
+                                                        //the artist obj
+                               
+                               
+                                        //the artist object
+                                        let cart: ProcessingOrderModel
+                                        
+                                        //getting the artist of selected position
+                                        cart = processingList[indexPath.row]
+                                        
+                                        //adding values to labels
+                                        
+                                        //.orderId.text = cart.orderId
+                               
+                               
+                               VC1.orderId = cart.orderId ?? ""
+                               VC1.userId = cart.userId ?? ""
+                    VC1.status = "processing"
+                               
+
+                               self.navigationController?.pushViewController(VC1, animated: true)
+                              
+                             
+                                     
+                                    
+                                 }
+                          
+            
+            case newOrdersTableView:
+            
+            if(indexPath.row == indexPath.row){
+                            
+                              let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                              let VC1 = storyBoard.instantiateViewController(withIdentifier: "ORDER_DETAIL") as! OrderDetailsViewController
+                                           // the artist object
+                                                        //the artist obj
+                               
+                               
+                                        //the artist object
+                                        let cart: NewOrderModel
+                                        
+                                        //getting the artist of selected position
+                                        cart = cartList[indexPath.row]
+                                        
+                                        //adding values to labels
+                                        
+                                        //.orderId.text = cart.orderId
+                               
+                               
+                               VC1.orderId = cart.orderId ?? ""
+                               VC1.userId = cart.userId ?? ""
+                 VC1.status = "pending"
+                               
+
+                               self.navigationController?.pushViewController(VC1, animated: true)
+                              
+                             
+                                     
+                                    
+                                 }
+                          
+            
                default:
                print("Some things Wrong!!")
+            
+            
+             
+            
                
            }
            
@@ -210,6 +295,60 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                     
                     cell.orderId.text = cart.orderId
                     cell.userName.text = cart.customerName
+                    
+                    
+                    refGetUserImage = Database.database().reference().child("users");
+                           //observing the data changes
+                           
+                                                                                                                
+                                                                 //observing the data changes
+                                                                                          refGetUserImage.observe(DataEventType.value, with: { (snapshot) in
+                               
+                                    
+                                    //if the reference have some values
+                                    if snapshot.childrenCount > 0 {
+                            
+                                     
+                                        //iterating through all the values
+                                        for carts in snapshot.children.allObjects as! [DataSnapshot] {
+                                            //getting values
+                                            let cartObject = carts.value as? [String: AnyObject]
+                                           
+                                            let userImage = cartObject?["imageUrl"]
+                                            let uId = cartObject?["userId"]
+                                            
+                                            var userID = ""
+                                            userID = uId as! String
+                                            
+                                            if(userID == cart.userId){
+                                                
+                                                var userImageUrl = ""
+                                                                                         userImageUrl = userImage as! String
+                                                                                           
+                                                                                           
+                                                                                           cell.userImage.kf.indicatorType = .activity
+                                                                                           cell.userImage.kf.setImage(with: URL(string:String(userImageUrl)), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+                                                                                                       
+                                                                                                      cell.userImage.heightAnchor.constraint(equalToConstant: 127).isActive = true
+                                                                                           
+                                            }
+                                           
+                                          
+                                           
+                                           
+                                        
+                                          
+                                        }
+                                        
+                                        
+                                    }
+                                  
+                                   
+                                  
+                                 
+                                  
+                                })
+                    
             
             //returning cell
             return cell
@@ -223,7 +362,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                            
                            cell.delegateReady = self
                            cell.Index = indexPath
-                         
+                           
                            
                            //the artist object
                            let cart: ReadyOrderModel
@@ -233,11 +372,18 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                            
                            //adding values to labels
                            
+                           
+                           
                            cell.orderId.text = cart.orderId
                            cell.userName.text = cart.customerName
+                           
+                           
+                         
+                           
+                                  
                           
                            
-                           self.customerDistance = Int(cart.distance ?? "") ?? 0
+                           self.customerDistance = Int(cart.distance ?? "") ?? 25
                                     if(customerDistance < 20){
                                         
                                         let notificationType = "Customer \(cart.customerName ?? "") is arriving. Make sure order \(cart.orderId ?? "") is ready"
@@ -299,8 +445,60 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                                         
                                         cell.eView.alpha = 0
                            }
-                                 
+                               
                            
+                           
+                           refGetUserImage = Database.database().reference().child("users");
+                                                    //observing the data changes
+                                                    
+                                                                                                                                         
+                                                                                          //observing the data changes
+                                                                                                                   refGetUserImage.observe(DataEventType.value, with: { (snapshot) in
+                                                        
+                                                             
+                                                             //if the reference have some values
+                                                             if snapshot.childrenCount > 0 {
+                                                     
+                                                              
+                                                                 //iterating through all the values
+                                                                 for carts in snapshot.children.allObjects as! [DataSnapshot] {
+                                                                     //getting values
+                                                                     let cartObject = carts.value as? [String: AnyObject]
+                                                                    
+                                                                     let userImage = cartObject?["imageUrl"]
+                                                                     let uId = cartObject?["userId"]
+                                                                     
+                                                                     var userID = ""
+                                                                     userID = uId as! String
+                                                                     
+                                                                     if(userID == cart.userId){
+                                                                         
+                                                                         var userImageUrl = ""
+                                                                                                                  userImageUrl = userImage as! String
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    cell.userImage.kf.indicatorType = .activity
+                                                                                                                    cell.userImage.kf.setImage(with: URL(string:String(userImageUrl)), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+                                                                                                                                
+                                                                                                                               cell.userImage.heightAnchor.constraint(equalToConstant: 127).isActive = true
+                                                                                                                    
+                                                                     }
+                                                                    
+                                                                   
+                                                                    
+                                                                    
+                                                                 
+                                                                   
+                                                                 }
+                                                                 
+                                                                 
+                                                             }
+                                                           
+                                                            
+                                                           
+                                                          
+                                                           
+                                                         })
                            
                           
             
@@ -340,7 +538,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                    refGetReadyOrders = Database.database().reference().child("order status");
         
         //observing the data changes
-               let query_process = refGetProcessingOrders.queryOrdered(byChild: "status").queryEqual(toValue: "preparing")
+        let query_process = refGetProcessingOrders.queryOrdered(byChild: "status").queryEqual(toValue: "preparing")
                                                         query_process.observe(DataEventType.value, with: { (snapshot) in
                                               
                                               //if the reference have some values
@@ -388,6 +586,10 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                                             
                                           })
                
+        
+        
+
+        
                         //observing the data changes
                                                     let query = refGetOrderInfo.queryOrdered(byChild: "status").queryEqual(toValue: "pending")
                                                                   query.observe(DataEventType.value, with: { (snapshot) in
@@ -454,7 +656,10 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                                        if snapshot.childrenCount > 0 {
                                          
                                         
-                                         
+                                        self.eViewReady.alpha = 0
+                                        self.emptyReadyOrders.alpha = 0
+                                        self.readyOrdersTableView.alpha = 1
+                                        
                                      
                                          
                                         
@@ -517,6 +722,8 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                                                   }
                                             
                                             }
+                                        
+                                        
                                       
                                              
                                            
@@ -528,6 +735,32 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
                                            self.readyOrdersTableView.reloadData()
                                       
                                        }
+                                                    
+                                       else{
+                                        
+                                        self.readyOrdersTableView.alpha = 0
+                                        self.eViewReady.alpha = 1
+                                        self.emptyReadyOrders.alpha = 1
+                                        self.lottieView.alpha = 1
+                                         self.lottieView.animation = Animation.named("No Ready")
+                                         //let lottieView = AnimationView(animation: loadingAnimation)
+                                             // 2. SECOND STEP (Adding and setup):
+                                        self.eViewReady.addSubview(self.lottieView)
+                                         self.lottieView.contentMode = .scaleAspectFit
+                                         self.lottieView.loopMode = .autoReverse
+                                         self.lottieView.play(toFrame: .infinity)
+                                         
+                                         
+                                         
+                                             // 3. THIRD STEP (LAYOUT PREFERENCES):
+                                         self.lottieView.translatesAutoresizingMaskIntoConstraints = false
+                                             NSLayoutConstraint.activate([
+                                                 self.lottieView.leftAnchor.constraint(equalTo: self.eViewReady.leftAnchor),
+                                                 self.lottieView.rightAnchor.constraint(equalTo: self.eViewReady.rightAnchor),
+                                                 self.lottieView.topAnchor.constraint(equalTo: self.eViewReady.topAnchor),
+                                                 self.lottieView.bottomAnchor.constraint(equalTo: self.eViewReady.bottomAnchor)
+                                             ])
+                                                    }
                                      
                                        
                                     
@@ -537,7 +770,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
       
             
         
-
+      
         
        
                      
@@ -644,20 +877,7 @@ extension AdminOrdersViewController: processingOrderDelegate {
                      let key = cart.dataKey
         
         
-        
-        if(title == "Preparing"){
-            
-            let refUp = Database.database().reference()
-            
-            
-            let updateStatus = refUp.child("order status/\(key ?? "")")
-            updateStatus.updateChildValues(["status": "preparing"])
-            //reloading the tableview
-            
-            
-           
-            
-        }
+   
         
         
         if(title == "Ready"){
@@ -759,6 +979,75 @@ extension AdminOrdersViewController: ReadyOrderDelegate {
                              self.readyOrdersTableView.reloadData()
                                                      
                              self.noReadyOrders.text = String( self.readyList.count )
+                                
+                                
+                                //observing the data changes
+                                let query_finish = self.refGetOrderInfo.queryOrdered(byChild: "status").queryEqual(toValue: "finish")
+                                                                                      
+                                       query_finish.observe(DataEventType.value, with: { (snapshot) in
+                                                                                             
+                                                                                             //if the reference have some values
+                                                                                             if snapshot.childrenCount > 0 {
+                                                                                               
+                                                                                              
+                                                                                               
+                                                                                           
+                                                                                               
+                                                                                              
+                                                                                                
+                                                                                               // self.animationView.alpha = 0
+                                                                                                 //iterating through all the values
+                                                                                                 for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
+                                                                                                     //getting values
+                                                                                                    
+                                                                                                   
+                                                                                                  
+                                                                                                    let cartObject = newOrders.value as? [String: AnyObject]
+                                                                                                    let userId  = cartObject?["userId"]
+                                                                                                    let orderId  = cartObject?["orderId"]
+                                                                                                    let dataKey = cartObject?["key"]
+                                                                                                      let customerName = cartObject?["name"]
+                                                                                                       let distance = cartObject?["distance"]
+                                                                                                     
+                                                                       var orderkey = ""
+                                                                      
+                                                                      orderkey = orderId as! String
+                                                                    var cusKey = ""
+                                                                    cusKey = userId as! String
+                                                                                                    
+                                                                    var cusDatakey = ""
+                                                                    cusDatakey = dataKey as! String
+                                                                                                    
+ 
+                                                                                                    
+                                                                                                   
+                                                    let ref = Database.database().reference()
+                                                                                                  ref.child("myOrder/\(cusKey)/\(orderkey)").observeSingleEvent(of: .value)  { (snapshotOrder) in
+                                                            ref.child("History/\(orderkey)").setValue(snapshotOrder.value)
+                                                                                                    
+                                                                                     
+                                                                             ref.child("myOrder/\(cusKey)/\(orderkey)").setValue(nil)
+                                                                                                    
+                                                                                                    ref.child("order status/\(cusDatakey)").setValue(nil)
+                                                                             
+                                                                                                             }
+                                                                                                          
+                                                                                                  
+                                                                                                  
+
+                                                                                                   
+                                                                                                 }
+                                                                                                
+                                                                                                
+                                                                                                 
+                                                                                                
+                                                                                             }
+                                                                                           
+                                                                                           
+                                                                                          
+                                                                                           
+                                                                                         })
+
                                                      
 
                                                          }))
