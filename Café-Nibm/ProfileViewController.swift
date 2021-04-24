@@ -304,6 +304,24 @@ class ProfileViewController: UIViewController, UITableViewDelegate , UITableView
         
     }
     
+    @IBAction func onSignOut(_ sender: Any) {
+    }
+    
+    
+    
+    func logoutUser() {
+        // call from any screen
+        
+        do { try Auth.auth().signOut() }
+        catch { print("already logged out") }
+        
+       
+    }
+
+    
+    
+    
+    
     @objc func dismissKeyboard() {
                   //Causes the view (or one of its embedded text fields) to resign the first responder status.
                   view.endEditing(true)

@@ -40,6 +40,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
      var audioPlayer = AVAudioPlayer()
     
     var customerName = ""
+    var message = ""
 
     
     var cartList = [NewOrderModel]()
@@ -54,6 +55,8 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
      var refGetOrderInfo: DatabaseReference!
       var refGetName: DatabaseReference!
      var refGetUserImage: DatabaseReference!
+     var refRejectMessage: DatabaseReference!
+    var refMessage: DatabaseReference!
     
     var ref : DatabaseReference!
     let user = Auth.auth().currentUser
@@ -844,6 +847,116 @@ extension AdminOrdersViewController: newOrderDelegate {
                                                                                  
                                                                                 }))
                                alert.addAction(UIAlertAction(title: "Send message ", style: .default, handler: { action in
+                                
+                                
+                                let alertController = UIAlertController(title: "Send Message", message: "", preferredStyle: UIAlertController.Style.alert)
+                                alertController.addTextField { (textField : UITextField!) -> Void in
+                                    textField.placeholder = "Enter reason for rejecting"
+                                }
+                                let saveAction = UIAlertAction(title: "Send", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                                    let firstTextField = alertController.textFields![0] as UITextField
+                                    self.message = alertController.textFields![0].text ?? ""
+                                    
+                                    //observing the data changes
+                                                                   let query_finish = self.refGetOrderInfo.queryOrdered(byChild: "status").queryEqual(toValue: "pending")
+                                                                                                                         
+                                                                          query_finish.observe(DataEventType.value, with: { (snapshot) in
+                                                                                                                                
+                                                                                                                                //if the reference have some values
+                                                                                                                                if snapshot.childrenCount > 0 {
+                                                                                                                                  
+                                                                                                    
+                                                                                                                                   
+                                                                                                                                  // self.animationView.alpha = 0
+                                                                                                                                    //iterating through all the values
+                                                                                                                                    for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
+                                                                                                                                        //getting values
+                                                                                                                                       
+                                                                                                                                      
+                                                                                                                                     
+                                                                                                                                       let cartObject = newOrders.value as? [String: AnyObject]
+                                                                                                                                       let userId  = cartObject?["userId"]
+                                                                                                                                       let orderId  = cartObject?["orderId"]
+                                                                                                                                       let dataKey = cartObject?["key"]
+                                                                                                                                         let customerName = cartObject?["name"]
+                                                                                                                                          let distance = cartObject?["distance"]
+                                                                                                                                        
+                                                                                                          var orderkey = ""
+                                                                                                         
+                                                                                                         orderkey = orderId as! String
+                                                                                                       var cusKey = ""
+                                                                                                       cusKey = userId as! String
+                                                                                                                                       
+                                                                                                       var cusDatakey = ""
+                                                                                                       cusDatakey = dataKey as! String
+                                                                                                                                                                
+                                                                                       let ref = Database.database().reference()
+                                                                                                                                     
+                                                                                                                                       
+                                                                                                                        
+                                                                                                                ref.child("myOrder/\(cusKey)/\(orderkey)").setValue(nil)
+                                                                                                                                       
+                                                                                                                                       ref.child("order status/\(cusDatakey)").setValue(nil)
+                                                                                                                                        
+                                                                    self.cartList.remove(at: Index)
+                                                                                        
+                                                                                                                                        self.noOrders.text = String(self.cartList.count );                                                                    self.newOrdersTableView.reloadData()
+                                                                                                               
+
+                                                                                            //getting a reference to the node artists
+                                                                                                    
+                                                                                                            let refMessage = Database.database().reference()
+                                                                                                                                                                                                                
+                                                           self.refMessage = Database.database().reference().child("reject messages");
+                                                                                                     
+                                                                                                     //observing the data changes
+                                            let query = self.refMessage.queryOrdered(byChild: "userId").queryEqual(toValue: "\(cusKey)")
+                                            query.observe(DataEventType.value, with: { (snapshot) in
+                                                                                                              
+                                                                                                              //if the reference have some values
+                                                                                                              if snapshot.childrenCount > 0 {
+                                                                    
+                                                                                                                
+                                            self.refMessage = Database.database().reference()
+                                                                                                                                                                                                                                                    
+                    //adding the artist inside the generated unique key
+                                                                                                                self.refRejectMessage.child("reject messages").updateChildValues([ "userId": "\(cusKey)", "message":  self.message ])
+                                                                                                                                                 }
+                                                
+                                                
+                                                                                                              else{
+                       self.refRejectMessage = Database.database().reference()
+                                                                                              
+
+                                                                                                    
+                       //adding the artist inside the generated unique key
+                         self.refRejectMessage.child("reject messages").setValue([ "userId": "\(cusKey)", "message":  self.message ])
+                                                        
+
+                                                                                                                
+                                                }
+                                                                                                          })
+                                                               
+                                                                                                                                    }
+                                                                        
+                                                                                                                                }
+                                                                                                    
+                                                           
+                                            
+                                                                            
+                                                                                             
+                                                                                                                            })
+                                    
+                                    
+                                })
+                                
+                             
+                                
+                                alertController.addAction(saveAction)
+                                
+                                
+                                self.present(alertController, animated: true, completion: nil)
+                                
 
                                                           
 
