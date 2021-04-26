@@ -41,6 +41,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
     
     var customerName = ""
     var message = ""
+    var noRejectKey = ""
 
     
     var cartList = [NewOrderModel]()
@@ -57,6 +58,7 @@ class AdminOrdersViewController:  UIViewController , UITableViewDelegate , UITab
      var refGetUserImage: DatabaseReference!
      var refRejectMessage: DatabaseReference!
     var refMessage: DatabaseReference!
+    var refNewrejmessage: DatabaseReference!
     
     var ref : DatabaseReference!
     let user = Auth.auth().currentUser
@@ -905,37 +907,85 @@ extension AdminOrdersViewController: newOrderDelegate {
 
                                                                                             //getting a reference to the node artists
                                                                                                     
-                                                                                                            let refMessage = Database.database().reference()
-                                                                                                                                                                                                                
+                                                                                                                                                                                                                           
                                                            self.refMessage = Database.database().reference().child("reject messages");
                                                                                                      
                                                                                                      //observing the data changes
-                                            let query = self.refMessage.queryOrdered(byChild: "userId").queryEqual(toValue: "\(cusKey)")
-                                            query.observe(DataEventType.value, with: { (snapshot) in
+                                           // let query = self.refMessage.queryOrdered(byChild: "userId")
+                                                                                                                                        self.refMessage.observe(DataEventType.value, with: { (snapshot) in
                                                                                                               
                                                                                                               //if the reference have some values
                                                                                                               if snapshot.childrenCount > 0 {
                                                                     
                                                                                                                 
-                                            self.refMessage = Database.database().reference()
-                                                                                                                                                                                                                                                    
+                                            
+
+                 //iterating through all the values
+                 for RejectMessges in snapshot.children.allObjects as! [DataSnapshot] {
+                     //getting values
+                     let foodObject = RejectMessges.value as? [String: AnyObject]
+                  
+                     let keyReject  = foodObject?["key"]
+                     let userId  = foodObject?["userId"]
+                    let userIdString  = userId as! String
+                    
+                    let keyRejectString = keyReject as! String
+                     
+                     
+                    self.refRejectMessage = Database.database().reference()
+                    
+                    if(userIdString == cusKey){
+                        
+                        self.noRejectKey = "false"
+                        
+                                               self.refRejectMessage.child("reject messages/\(keyRejectString)").setValue([ "userId": "\(cusKey)", "message":  self.message, "key": "\(keyRejectString)" ])
+                    }
+                    
+                    else{
+                        self.noRejectKey = "true"
+                    }
+                    
+                    
+            
+                    
+                    }
+        
+                 }
                     //adding the artist inside the generated unique key
-                                                                                                                self.refRejectMessage.child("reject messages").updateChildValues([ "userId": "\(cusKey)", "message":  self.message ])
-                                                                                                                                                 }
+                                                                                                                
                                                 
                                                 
                                                                                                               else{
-                       self.refRejectMessage = Database.database().reference()
-                                                                                              
-
+                       self.refNewrejmessage = Database.database().reference()
+                                                                                                          
+                                                                                                            let key = self.refNewrejmessage.childByAutoId().key
+                                                                                                        
+                                                                                                                
+                      
                                                                                                     
                        //adding the artist inside the generated unique key
-                         self.refRejectMessage.child("reject messages").setValue([ "userId": "\(cusKey)", "message":  self.message ])
+                                                                                                                self.refNewrejmessage.child("reject messages/\(key ?? "")").setValue([ "userId": "\(cusKey)", "message":  self.message, "key": "\(key ?? "")" ])
                                                         
 
                                                                                                                 
                                                 }
+                                    if(self.noRejectKey == "true"){
+                                                                                                             
+                                                                                                             
+                                                                                                             self.refNewrejmessage = Database.database().reference()
+                                                                                                                                                                                                 
+                                                                                                                                                                                                   let key = self.refNewrejmessage.childByAutoId().key
+                                                                                                                                                                                               
+                                                                                                                                                                                                       
+                                                                                                             
+                                                                                                                                                                                           
+                                                                                                              //adding the artist inside the generated unique key
+                                                                                                                                                                                                       self.refNewrejmessage.child("reject messages/\(key ?? "")").setValue([ "userId": "\(cusKey)", "message":  self.message, "key": "\(key ?? "")" ])
+                                                                                                                                                                                 
+                                                                                                          }
                                                                                                           })
+                                
+                          
                                                                
                                                                                                                                     }
                                                                         

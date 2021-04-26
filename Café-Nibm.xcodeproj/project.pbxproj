@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071D448EC7338EF95845C6ED /* Pods_Cafe__Nibm_Cafe__NibmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21511D1C827359EF9264BB24 /* Pods_Cafe__Nibm_Cafe__NibmUITests.framework */; };
 		9B01F2CB25F5D3E000292A5C /* Home_Tab_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01F2CA25F5D3DF00292A5C /* Home_Tab_ViewController.swift */; };
 		9B01F2CD25F5FFF200292A5C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01F2CC25F5FFF200292A5C /* LocationViewController.swift */; };
 		9B04F8D525F4BDA1003FF072 /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04F8D425F4BDA1003FF072 /* CollectionModel.swift */; };
@@ -38,6 +37,8 @@
 		9B31874325EDFB1D007765CA /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31874225EDFB1D007765CA /* CartModel.swift */; };
 		9B31874525EDFB37007765CA /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31874425EDFB37007765CA /* CartTableViewCell.swift */; };
 		9B31874725EDFB56007765CA /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31874625EDFB56007765CA /* CartViewController.swift */; };
+		9B336F1226372CB7008B7D51 /* RegisterUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B336F1126372CB7008B7D51 /* RegisterUITest.swift */; };
+		9B336F14263733EC008B7D51 /* ForgotPasswordUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B336F13263733EC008B7D51 /* ForgotPasswordUITest.swift */; };
 		9B368340261C489400457C84 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B36833F261C489400457C84 /* AddCategoryViewController.swift */; };
 		9B368342261C48A600457C84 /* AddMenuFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B368341261C48A600457C84 /* AddMenuFoodViewController.swift */; };
 		9B368344261CA73B00457C84 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B368343261CA73B00457C84 /* Category.swift */; };
@@ -60,7 +61,6 @@
 		9B43BBCC25E36D940039D5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B43BBCB25E36D940039D5E2 /* Assets.xcassets */; };
 		9B43BBCF25E36D940039D5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B43BBCD25E36D940039D5E2 /* LaunchScreen.storyboard */; };
 		9B43BBDA25E36D950039D5E2 /* Cafe__NibmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBD925E36D950039D5E2 /* Cafe__NibmTests.swift */; };
-		9B43BBE525E36D950039D5E2 /* Cafe__NibmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */; };
 		9B44123325E6AC8C00A0445A /* Try_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */; };
 		9B460E4426245F2800A6D9C7 /* EditFoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B460E4326245F2800A6D9C7 /* EditFoodItemViewController.swift */; };
 		9B6F1DB526209E650008FCA4 /* AdminAcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */; };
@@ -74,6 +74,7 @@
 		9B9ACB482611E406006998F8 /* Add_Photo_Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9ACB472611E406006998F8 /* Add_Photo_Instructions.swift */; };
 		9B9ACB4A2611E440006998F8 /* Add_Photo_Instructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9ACB492611E43F006998F8 /* Add_Photo_Instructions.xib */; };
 		9B9BF52725E56BA2002F0B53 /* HomeCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9BF52625E56BA2002F0B53 /* HomeCartTableViewCell.swift */; };
+		9BBA98B82636FECA008A298A /* Cafe__NibmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA98B72636FECA008A298A /* Cafe__NibmUITests.swift */; };
 		9BD1E47625F07B9C004DF8C0 /* OrderScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1E47525F07B9C004DF8C0 /* OrderScreenViewController.swift */; };
 		9BD1E47825F07BC6004DF8C0 /* OrderScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1E47725F07BC6004DF8C0 /* OrderScreenTableViewCell.swift */; };
 		9BD1E47A25F07BE1004DF8C0 /* OrderScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1E47925F07BE1004DF8C0 /* OrderScreenModel.swift */; };
@@ -106,7 +107,6 @@
 		9BFAC94B25EBA81A00B87075 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAC94A25EBA81A00B87075 /* ArtistModel.swift */; };
 		9BFAC94D25EBAAD800B87075 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAC94C25EBAAD800B87075 /* TestTableViewCell.swift */; };
 		9BFAC95125EBB31C00B87075 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BFAC95025EBB31B00B87075 /* GoogleService-Info.plist */; };
-		C58B7AAA9643EA335A63AFA6 /* Pods_Cafe__NibmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D345425B7D6BE2435EAF3D43 /* Pods_Cafe__NibmTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +117,7 @@
 			remoteGlobalIDString = 9B43BBBE25E36D8E0039D5E2;
 			remoteInfo = "Café-Nibm";
 		};
-		9B43BBE125E36D950039D5E2 /* PBXContainerItemProxy */ = {
+		9BBA98BA2636FECA008A298A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B43BBB725E36D8E0039D5E2 /* Project object */;
 			proxyType = 1;
@@ -128,7 +128,6 @@
 
 /* Begin PBXFileReference section */
 		206A8013D55097381DD26BE8 /* Pods-Café-NibmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Café-NibmTests.debug.xcconfig"; path = "Target Support Files/Pods-Café-NibmTests/Pods-Café-NibmTests.debug.xcconfig"; sourceTree = "<group>"; };
-		21511D1C827359EF9264BB24 /* Pods_Cafe__Nibm_Cafe__NibmUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cafe__Nibm_Cafe__NibmUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3317DC55DE4F003B4AAB95DA /* Pods-Café-Nibm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Café-Nibm.release.xcconfig"; path = "Target Support Files/Pods-Café-Nibm/Pods-Café-Nibm.release.xcconfig"; sourceTree = "<group>"; };
 		648232428459DB3438920618 /* Pods-Café-NibmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Café-NibmTests.release.xcconfig"; path = "Target Support Files/Pods-Café-NibmTests/Pods-Café-NibmTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B01F2CA25F5D3DF00292A5C /* Home_Tab_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Tab_ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +160,8 @@
 		9B31874225EDFB1D007765CA /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		9B31874425EDFB37007765CA /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		9B31874625EDFB56007765CA /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9B336F1126372CB7008B7D51 /* RegisterUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITest.swift; sourceTree = "<group>"; };
+		9B336F13263733EC008B7D51 /* ForgotPasswordUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordUITest.swift; sourceTree = "<group>"; };
 		9B36833F261C489400457C84 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		9B368341261C48A600457C84 /* AddMenuFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuFoodViewController.swift; sourceTree = "<group>"; };
 		9B368343261CA73B00457C84 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -187,9 +188,6 @@
 		9B43BBD525E36D950039D5E2 /* Café-NibmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Café-NibmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B43BBD925E36D950039D5E2 /* Cafe__NibmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe__NibmTests.swift; sourceTree = "<group>"; };
 		9B43BBDB25E36D950039D5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B43BBE025E36D950039D5E2 /* Café-NibmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Café-NibmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe__NibmUITests.swift; sourceTree = "<group>"; };
-		9B43BBE625E36D950039D5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B44123225E6AC8C00A0445A /* Try_1_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try_1_ViewController.swift; sourceTree = "<group>"; };
 		9B460E4326245F2800A6D9C7 /* EditFoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditFoodItemViewController.swift; path = ../EditFoodItemViewController.swift; sourceTree = "<group>"; };
 		9B6F1DB426209E650008FCA4 /* AdminAcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminAcountViewController.swift; path = ../AdminAcountViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +201,9 @@
 		9B9ACB472611E406006998F8 /* Add_Photo_Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_Photo_Instructions.swift; sourceTree = "<group>"; };
 		9B9ACB492611E43F006998F8 /* Add_Photo_Instructions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Add_Photo_Instructions.xib; sourceTree = "<group>"; };
 		9B9BF52625E56BA2002F0B53 /* HomeCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCartTableViewCell.swift; sourceTree = "<group>"; };
+		9BBA98B52636FECA008A298A /* Café-NibmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Café-NibmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BBA98B72636FECA008A298A /* Cafe__NibmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe__NibmUITests.swift; sourceTree = "<group>"; };
+		9BBA98B92636FECA008A298A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD1E47525F07B9C004DF8C0 /* OrderScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderScreenViewController.swift; sourceTree = "<group>"; };
 		9BD1E47725F07BC6004DF8C0 /* OrderScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderScreenTableViewCell.swift; sourceTree = "<group>"; };
 		9BD1E47925F07BE1004DF8C0 /* OrderScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderScreenModel.swift; sourceTree = "<group>"; };
@@ -236,7 +237,6 @@
 		9BFAC94C25EBAAD800B87075 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		9BFAC95025EBB31B00B87075 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF45460222F351CE3CC4A890 /* Pods-Café-Nibm-Café-NibmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Café-Nibm-Café-NibmUITests.release.xcconfig"; path = "Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D345425B7D6BE2435EAF3D43 /* Pods_Cafe__NibmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cafe__NibmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BCE506E3639F3BDBE06318 /* Pods-Café-Nibm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Café-Nibm.debug.xcconfig"; path = "Target Support Files/Pods-Café-Nibm/Pods-Café-Nibm.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8AA1CBEF65CE8F8D3227EA /* Pods-Café-Nibm-Café-NibmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Café-Nibm-Café-NibmUITests.debug.xcconfig"; path = "Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,15 +253,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C58B7AAA9643EA335A63AFA6 /* Pods_Cafe__NibmTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B43BBDD25E36D950039D5E2 /* Frameworks */ = {
+		9BBA98B22636FECA008A298A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071D448EC7338EF95845C6ED /* Pods_Cafe__Nibm_Cafe__NibmUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +336,7 @@
 			children = (
 				9B43BBC125E36D8E0039D5E2 /* Café-Nibm */,
 				9B43BBD825E36D950039D5E2 /* Café-NibmTests */,
-				9B43BBE325E36D950039D5E2 /* Café-NibmUITests */,
+				9BBA98B62636FECA008A298A /* Café-NibmUITests */,
 				9B43BBC025E36D8E0039D5E2 /* Products */,
 				E9217F18582AD1B7787A61D3 /* Pods */,
 				9FDF8615D1CFDEB68076D523 /* Frameworks */,
@@ -350,7 +348,7 @@
 			children = (
 				9B43BBBF25E36D8E0039D5E2 /* Café-Nibm.app */,
 				9B43BBD525E36D950039D5E2 /* Café-NibmTests.xctest */,
-				9B43BBE025E36D950039D5E2 /* Café-NibmUITests.xctest */,
+				9BBA98B52636FECA008A298A /* Café-NibmUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -385,15 +383,6 @@
 				9B43BBDB25E36D950039D5E2 /* Info.plist */,
 			);
 			path = "Café-NibmTests";
-			sourceTree = "<group>";
-		};
-		9B43BBE325E36D950039D5E2 /* Café-NibmUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9B43BBE425E36D950039D5E2 /* Cafe__NibmUITests.swift */,
-				9B43BBE625E36D950039D5E2 /* Info.plist */,
-			);
-			path = "Café-NibmUITests";
 			sourceTree = "<group>";
 		};
 		9B8B15FA25E40FE700E915C3 /* Controllers */ = {
@@ -431,6 +420,17 @@
 				9B0D42C625E4D2D200F06C91 /* Views */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9BBA98B62636FECA008A298A /* Café-NibmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BBA98B72636FECA008A298A /* Cafe__NibmUITests.swift */,
+				9B336F1126372CB7008B7D51 /* RegisterUITest.swift */,
+				9B336F13263733EC008B7D51 /* ForgotPasswordUITest.swift */,
+				9BBA98B92636FECA008A298A /* Info.plist */,
+			);
+			path = "Café-NibmUITests";
 			sourceTree = "<group>";
 		};
 		9BF556FD26088BDD0060092A /* AnimationAssests */ = {
@@ -488,8 +488,6 @@
 		9FDF8615D1CFDEB68076D523 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				21511D1C827359EF9264BB24 /* Pods_Cafe__Nibm_Cafe__NibmUITests.framework */,
-				D345425B7D6BE2435EAF3D43 /* Pods_Cafe__NibmTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -549,25 +547,22 @@
 			productReference = 9B43BBD525E36D950039D5E2 /* Café-NibmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9B43BBDF25E36D950039D5E2 /* Café-NibmUITests */ = {
+		9BBA98B42636FECA008A298A /* Café-NibmUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B43BBEF25E36D950039D5E2 /* Build configuration list for PBXNativeTarget "Café-NibmUITests" */;
+			buildConfigurationList = 9BBA98BC2636FECA008A298A /* Build configuration list for PBXNativeTarget "Café-NibmUITests" */;
 			buildPhases = (
-				F2630C4B8D5258A701452F90 /* [CP] Check Pods Manifest.lock */,
-				9B43BBDC25E36D950039D5E2 /* Sources */,
-				9B43BBDD25E36D950039D5E2 /* Frameworks */,
-				9B43BBDE25E36D950039D5E2 /* Resources */,
-				FBDD9C6C762AE0A822FC51A3 /* [CP] Embed Pods Frameworks */,
-				120C776C3C82FC3AC8E1C820 /* [CP] Copy Pods Resources */,
+				9BBA98B12636FECA008A298A /* Sources */,
+				9BBA98B22636FECA008A298A /* Frameworks */,
+				9BBA98B32636FECA008A298A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B43BBE225E36D950039D5E2 /* PBXTargetDependency */,
+				9BBA98BB2636FECA008A298A /* PBXTargetDependency */,
 			);
 			name = "Café-NibmUITests";
 			productName = "Café-NibmUITests";
-			productReference = 9B43BBE025E36D950039D5E2 /* Café-NibmUITests.xctest */;
+			productReference = 9BBA98B52636FECA008A298A /* Café-NibmUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -587,7 +582,7 @@
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 9B43BBBE25E36D8E0039D5E2;
 					};
-					9B43BBDF25E36D950039D5E2 = {
+					9BBA98B42636FECA008A298A = {
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 9B43BBBE25E36D8E0039D5E2;
 					};
@@ -608,7 +603,7 @@
 			targets = (
 				9B43BBBE25E36D8E0039D5E2 /* Café-Nibm */,
 				9B43BBD425E36D950039D5E2 /* Café-NibmTests */,
-				9B43BBDF25E36D950039D5E2 /* Café-NibmUITests */,
+				9BBA98B42636FECA008A298A /* Café-NibmUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -654,7 +649,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B43BBDE25E36D950039D5E2 /* Resources */ = {
+		9BBA98B32636FECA008A298A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -664,23 +659,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		120C776C3C82FC3AC8E1C820 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		56CC87FBB2502796464DB02C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -735,45 +713,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm/Pods-Café-Nibm-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2630C4B8D5258A701452F90 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Café-Nibm-Café-NibmUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FBDD9C6C762AE0A822FC51A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Café-Nibm-Café-NibmUITests/Pods-Café-Nibm-Café-NibmUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCE1831293E658319A114BE1 /* [CP] Check Pods Manifest.lock */ = {
@@ -886,11 +825,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B43BBDC25E36D950039D5E2 /* Sources */ = {
+		9BBA98B12636FECA008A298A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B43BBE525E36D950039D5E2 /* Cafe__NibmUITests.swift in Sources */,
+				9B336F1226372CB7008B7D51 /* RegisterUITest.swift in Sources */,
+				9BBA98B82636FECA008A298A /* Cafe__NibmUITests.swift in Sources */,
+				9B336F14263733EC008B7D51 /* ForgotPasswordUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,10 +843,10 @@
 			target = 9B43BBBE25E36D8E0039D5E2 /* Café-Nibm */;
 			targetProxy = 9B43BBD625E36D950039D5E2 /* PBXContainerItemProxy */;
 		};
-		9B43BBE225E36D950039D5E2 /* PBXTargetDependency */ = {
+		9BBA98BB2636FECA008A298A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9B43BBBE25E36D8E0039D5E2 /* Café-Nibm */;
-			targetProxy = 9B43BBE125E36D950039D5E2 /* PBXContainerItemProxy */;
+			targetProxy = 9BBA98BA2636FECA008A298A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1127,20 +1068,18 @@
 			};
 			name = Release;
 		};
-		9B43BBF025E36D950039D5E2 /* Debug */ = {
+		9BBA98BD2636FECA008A298A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC8AA1CBEF65CE8F8D3227EA /* Pods-Café-Nibm-Café-NibmUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P557FW6975;
+				DEVELOPMENT_TEAM = UN4W4CCPVH;
 				INFOPLIST_FILE = "Café-NibmUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--NibmUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--UITestNibmUITests1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1148,20 +1087,18 @@
 			};
 			name = Debug;
 		};
-		9B43BBF125E36D950039D5E2 /* Release */ = {
+		9BBA98BE2636FECA008A298A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF45460222F351CE3CC4A890 /* Pods-Café-Nibm-Café-NibmUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P557FW6975;
+				DEVELOPMENT_TEAM = UN4W4CCPVH;
 				INFOPLIST_FILE = "Café-NibmUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--NibmUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "gayan.Cafe--UITestNibmUITests1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1199,11 +1136,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B43BBEF25E36D950039D5E2 /* Build configuration list for PBXNativeTarget "Café-NibmUITests" */ = {
+		9BBA98BC2636FECA008A298A /* Build configuration list for PBXNativeTarget "Café-NibmUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B43BBF025E36D950039D5E2 /* Debug */,
-				9B43BBF125E36D950039D5E2 /* Release */,
+				9BBA98BD2636FECA008A298A /* Debug */,
+				9BBA98BE2636FECA008A298A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -26,6 +26,7 @@ class EditFoodItemViewController:UIViewController, UIImagePickerControllerDelega
     
     
     
+    
     var editFoodName = ""
     var editFoodPrice = ""
     var Editdiscount = ""

@@ -14,6 +14,27 @@ class Cafe__NibmTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
+    
+    func testLoginValidation(){
+        
+        let email = "gayan@gmail.com"
+        let password = "Gayananu21@"
+        
+        
+        let cleanedPassword = password.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        
+        if(Utilities.isValidEmail(cleanedEmail) && Utilities.isPasswordValid(cleanedPassword) == true){
+            
+            XCTAssertEqual("gayan@gmail.com", cleanedEmail)
+            XCTAssertEqual("Gayananu21@", cleanedPassword)
+            
+        }
+        
+        
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }

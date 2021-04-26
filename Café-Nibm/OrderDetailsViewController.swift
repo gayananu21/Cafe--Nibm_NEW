@@ -23,6 +23,7 @@ class OrderDetailsViewController: UIViewController,  UITableViewDelegate, UITabl
     var userId = ""
     var status = ""
     
+    var customerNumber = ""
     
     
     @IBOutlet weak var cartTableView: UITableView!
@@ -30,6 +31,7 @@ class OrderDetailsViewController: UIViewController,  UITableViewDelegate, UITabl
      var refCarts: DatabaseReference!
      var refGetProcessingOrders: DatabaseReference!
     var refGetFoodImage: DatabaseReference!
+    var refGetUserPhoneNumber: DatabaseReference!
     
      var cartList = [OrderDetailMenu]()
     
@@ -105,6 +107,41 @@ class OrderDetailsViewController: UIViewController,  UITableViewDelegate, UITabl
         
         cartTableView.delegate = self
                       cartTableView.dataSource = self
+        
+        
+        refGetUserPhoneNumber = Database.database().reference().child("users");
+                           
+                          
+                           
+        let query_process_Phone = refGetUserPhoneNumber.queryOrdered(byChild: "userId").queryEqual(toValue: "\(userId)")
+                           query_process_Phone.observe(DataEventType.value, with: { (snapshot) in
+                                                                 
+                                                                 
+                            if snapshot.childrenCount > 0 {
+                                
+                                for newOrders in snapshot.children.allObjects as! [DataSnapshot] {
+                                
+                                    
+                                    let cartObject = newOrders.value as? [String: AnyObject]
+                                    let phoneNumber  = cartObject?["phoneNumber"]
+                                                                                        
+                                    
+                                    self.customerNumber = phoneNumber as! String
+                                                                   
+                        
+                                                                  
+                                                                 }
+                           }
+                                                               
+        
+                           }
+                                                               
+                                                             )
+        
+        
+        
+        
+        
                       
                       //getting a reference to the node artists
         refCarts = Database.database().reference().child("myOrder/\(self.userId)/\(self.orderId)");
@@ -120,10 +157,7 @@ class OrderDetailsViewController: UIViewController,  UITableViewDelegate, UITabl
                                    
                                
                                    
-                                   self.tabBarController?.tabBar.items![1].image =  UIImage(systemName: "cart.fill")
-                                   // items![0] index of your tab bar item.items![0] means tabbar first item
-
-                                    self.tabBarController?.tabBar.items![1].selectedImage = UIImage(systemName: "cart.fill")
+                                  
                                      
                                      //clearing the list
                                      self.cartList.removeAll()
@@ -337,6 +371,14 @@ class OrderDetailsViewController: UIViewController,  UITableViewDelegate, UITabl
     }
     
 
+    @IBAction func onCallButton(_ sender: Any) {
+        
+        let numberString = self.customerNumber
+        let url = URL(string: "telprompt://\(numberString)")
+        
+        UIApplication.shared.open(url!)
+        
+    }
     /*
     // MARK: - Navigation
 
